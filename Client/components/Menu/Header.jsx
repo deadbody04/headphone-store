@@ -62,10 +62,6 @@ export default function Header({
         setState({...state, [anchor]: open});
     };
 
-    useEffect(() => {
-        console.log(context)
-    }, [context])
-
     const handleClickOpen = () => {
         setOpen(true)
     }
@@ -76,6 +72,9 @@ export default function Header({
 
     const openOrder = () => {
         setForm(4)
+    }
+    const openSignPage = () => {
+      setForm(0)
     }
 
 
@@ -156,7 +155,10 @@ export default function Header({
                                     color="inherit"
                                     className={classNames(classes.menuButtons, classes.logText)}
                                     underline="none"
-                                    onClick={handleClickOpen}
+                                    onClick={() => {
+                                      handleClickOpen();
+                                      openSignPage();
+                                    }}
                             >
                                 Log in
                             </Link>
