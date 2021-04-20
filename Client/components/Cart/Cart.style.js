@@ -1,6 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme) => ({
+  fullPage: {
+    background: '#2D2D2D',
+  },
   mainBlock: {
     background: '#2D2D2D',
     minHeight: 600,
@@ -19,6 +22,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: 26,
     alignItems: 'center',
     margin: 'auto',
+    color: '#fff',
   },
   emptyCartTitle: {
     fontSize: 24,

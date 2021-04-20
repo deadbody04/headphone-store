@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/components/Cart/Cart.Style.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/components/Cart/Cart.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/components/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Client/components/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/components/Cart/Cart.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/components/Cart/Cart.style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/components/Menu/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Client/components/Menu/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/components/SideCart/SideCart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Client/components/SideCart/SideCart.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,8 @@
       <updated>1618908148312</updated>
       <workItem from="1618908152232" duration="31000" />
       <workItem from="1618908212416" duration="1719000" />
-      <workItem from="1618910079911" duration="320000" />
+      <workItem from="1618910079911" duration="1772000" />
+      <workItem from="1618911917735" duration="925000" />
     </task>
     <servers />
   </component>

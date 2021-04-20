@@ -16,6 +16,8 @@ import OtherLinks from '../OtherLinks/OtherLinks'
 import Footer from '../Footer/Footer'
 
 export default function Cart(props) {
+  const classes = useStyles()
+
   const {
     product,
     removeProductFromCart,
@@ -25,8 +27,6 @@ export default function Cart(props) {
     carts,
     setOpen,
   } = props
-
-  const classes = useStyles()
 
   const handleClose = () => {
     setOpen(false)
@@ -39,24 +39,11 @@ export default function Cart(props) {
   )
 
   return (
-    <main>
+    <main className={classes.fullPage}>
       <Header />
       <Box className={classes.mainBlock}>
         <Grid container item className={classes.mainContainer}>
-          {carts.length === 0 ? (
-            <Grid className={classes.emptyCart}>
-              <Typography className={classes.emptyCartTitle}>
-                Cart is empty
-              </Typography>
-              <br />
-              <Link
-                onClick={handleClose}
-                className={classes.linkContinue}
-              >
-                Continue Shopping
-              </Link>
-            </Grid>
-          ) : (
+          {carts.length !== 0 ? (
             <>
               <Grid container item className={classes.firstGrid}>
                 <Typography className={classes.boxTitleFirst}>
@@ -164,6 +151,16 @@ export default function Cart(props) {
                 </Grid>
               </Grid>
             </>
+          ) : (
+            <Grid className={classes.emptyCart}>
+              <Typography className={classes.emptyCartTitle}>
+                Cart is empty
+              </Typography>
+              <br />
+              <Link onClick={handleClose} className={classes.linkContinue}>
+                Continue Shopping
+              </Link>
+            </Grid>
           )}
         </Grid>
       </Box>

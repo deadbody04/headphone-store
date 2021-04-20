@@ -185,7 +185,7 @@ export default function Header({
                                 {console.log(form)}
                             </Button>
                             }
-                            <Dialog open={open} fullScreen>
+                            <Dialog open={open} fullScreen >
                                 <Grid className={classes.mainGrid}>
                                     {form === 0 ? (
                                             <>
@@ -221,7 +221,6 @@ export default function Header({
                                             />
                                     ) : form === 5 ? (
                                             <>
-                                            <Header/>
                                             <Cart product={product}
                                                   carts={context.carts}
                                                   setOpen={setOpen}
@@ -232,7 +231,12 @@ export default function Header({
                                                   addProductToCart={context.addProductToCart}
                                             />
                                             </>
-                                    ) : console.log('ololo')}
+                                    ) : <>
+                                      <IconButton className={classes.closeButton} onClick={handleClose}>
+                                        <Close/>
+                                      </IconButton>
+                                      <SignUp setForm={setForm}/>
+                                    </>}
                                 </Grid>
                             </Dialog>
                             <Link
