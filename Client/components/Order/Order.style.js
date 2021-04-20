@@ -61,6 +61,7 @@ export const useStyles = makeStyles((theme) => ({
     color: '#ECECEC',
     fontSize: 16,
     marginBottom: 10,
+    marginTop: 60,
   },
   buttonOrder: {
     marginTop: 30,

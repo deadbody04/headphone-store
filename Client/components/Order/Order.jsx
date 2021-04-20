@@ -53,8 +53,8 @@ function a11yProps(index) {
 
 export default function Order(props) {
     const classes = useStyles();
-
-    let spinnerInput = React.createRef()
+    //
+    // let spinnerInput = React.createRef()
 
     const [openButton, setOpenButton] = useState(1);
     const [value, setValue] = useState(0);
@@ -71,11 +71,11 @@ export default function Order(props) {
     const handleClosePage = () => {
         setOpen(false)
     }
-
-    function inputChange() {
-        setOutput(spinnerInput.current.value)
-        console.log(spinnerInput.current)
-    }
+    //
+    // function inputChange() {
+    //     setOutput(spinnerInput.current.value)
+    //     console.log(spinnerInput.current)
+    // }
 
     const allProducts = products.map(item => {
         return (
@@ -144,7 +144,7 @@ export default function Order(props) {
                         >
                             <Box>
                                 <Button className={classes.buttonOrder} variant="outlined"
-                                        quantity={output} onClick={() => addProductToCart(item)}> Order Now </Button>
+                                        onClick={() => addProductToCart(item)}> Order Now </Button>
                             </Box>
                             <Box>
                                 <Button className={classes.buttonBuy} variant="outlined">Buy Now</Button>
@@ -201,19 +201,19 @@ export default function Order(props) {
                                         {colorPicker}
                                     </Tabs>
                                 </Box>
-                                <Box className={classes.quantitySpinner}>
-                                    <Typography variant='h2'
-                                                className={classes.colorSelectorText}>Quantity
-                                    </Typography>
-                                    <input type="number"
-                                           className={classes.inputField}
-                                           ref={spinnerInput}
-                                           onChange={inputChange}
-                                           value={output}
-                                           min={1}
-                                           max={10}
-                                    />
-                                </Box>
+                                {/*<Box className={classes.quantitySpinner}>*/}
+                                {/*    <Typography variant='h2'*/}
+                                {/*                className={classes.colorSelectorText}>Quantity*/}
+                                {/*    </Typography>*/}
+                                {/*    <input type="number"*/}
+                                {/*           className={classes.inputField}*/}
+                                {/*           ref={spinnerInput}*/}
+                                {/*           onChange={inputChange}*/}
+                                {/*           value={output}*/}
+                                {/*           min={1}*/}
+                                {/*           max={10}*/}
+                                {/*    />*/}
+                                {/*</Box>*/}
                                 {buyButton}
                                 <Box className={classes.accordionSection}>
                                     <AccordionCustom>
