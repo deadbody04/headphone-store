@@ -1,100 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/headphone-shop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AsFeaturedOn/AsFeaturedOn.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AsFeaturedOn/AsFeaturedOn.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AsFeaturedOn/first.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AsFeaturedOn/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/AuthLayout/AuthLayout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/AuthLayout/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/Login/Login.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/Login/LoginWithEmail.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/Login/LoginWithEmail.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/Login/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/Login/loogin.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/SignUp/SignUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/SignUp/SignUp.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/SignUp/SignUpWithEmail.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Auth/SignUp/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BestSound/BestSound.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BestSound/BestSound.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BestSound/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Cart/Cart.Style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Cart/Cart.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Cart/CartItem.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Cart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Content/Content.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Content/Content.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Content/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/EmailDistribution/EmailDistribution.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/EmailDistribution/EmailDistribution.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/EmailDistribution/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer/Footer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer/Footer.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/InfoAbout/InfoAbout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/InfoAbout/InfoAbout.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/InfoAbout/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MainContent/MainContent.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MainContent/MainContent.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MainContent/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Menu/Header.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Menu/Header.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Menu/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Order/Order.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Order/Order.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Order/Products.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Order/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OtherLinks/OtherLinks.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OtherLinks/OtherLinks.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OtherLinks/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Product/Product.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Product/ProductBasket.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Product/Products.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Product/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Reviews/Reviews.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Reviews/Reviews.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Reviews/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SideCart/SideCart.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SideCart/SideCart.style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SideCart/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/hello.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/Model_Strip_Single.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/firstBackground.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/nigga.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/paralaxBackgoound.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/EastFlowIcon.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/InstrumentalIcon.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/RockIcon.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/TuneIcon.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/WaveIcon.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/Context.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/GlobalState.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/Reducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/Types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
-    </list>
+    <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,6 +34,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618908148312</updated>
       <workItem from="1618908152232" duration="31000" />
+      <workItem from="1618908212416" duration="287000" />
     </task>
     <servers />
   </component>
@@ -143,5 +51,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
