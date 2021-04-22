@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/components/Order/Order.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Client/components/Order/Order.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/components/Order/Order.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/components/Order/Order.style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +11,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/server/config/database.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1rQV8sDaiLtdiKLGn0Ku9TsxEGo" />
   <component name="ProjectViewState">
@@ -30,10 +31,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="" />
@@ -46,12 +50,21 @@
       <workItem from="1618910079911" duration="1772000" />
       <workItem from="1618911917735" duration="1398000" />
       <workItem from="1618916174704" duration="1787000" />
-      <workItem from="1618917995470" duration="624000" />
+      <workItem from="1618917995470" duration="665000" />
+      <workItem from="1619063452442" duration="997000" />
+      <workItem from="1619064528024" duration="465000" />
+      <workItem from="1619066131070" duration="1770000" />
+      <workItem from="1619068679277" duration="9000" />
+      <workItem from="1619068713966" duration="45000" />
+      <workItem from="1619068797752" duration="263000" />
+      <workItem from="1619069084705" duration="3000" />
+      <workItem from="1619085311625" duration="236000" />
+      <workItem from="1619085570573" duration="532000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -64,5 +77,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="198" key="#Inspections" timestamp="1619085715403">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619085715403" />
+    <state x="238" y="126" width="1200" height="708" key="SettingsEditor" timestamp="1619085990556">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="238" y="126" width="1200" height="708" key="SettingsEditor/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619085990556" />
   </component>
 </project>
