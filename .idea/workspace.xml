@@ -21,11 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/extensions/users-permissions/config/jwt.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/extensions/users-permissions/config/jwt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Menu/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +120,7 @@
       <workItem from="1619085311625" duration="236000" />
       <workItem from="1619085570573" duration="2322000" />
       <workItem from="1619088750628" duration="1704000" />
+      <workItem from="1619162438631" duration="347000" />
     </task>
     <servers />
   </component>
