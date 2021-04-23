@@ -91,7 +91,7 @@ export default function Header({
                                     onClick={handleClose}
                             >
                                 <Headset className={classes.headIcon}/>
-                                Soundbeam-shop
+                                Soundbeam
                             </Link>
                             {console.log('Вначале', setOpen)}
                             <Link
