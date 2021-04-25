@@ -1,1 +1,1 @@
-web: node ../../client/pages/index.jsx
+web: /usr/local/bin/node index.jsx
