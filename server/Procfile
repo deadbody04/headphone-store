@@ -1,1 +1,1 @@
-web: 'export PATH=$PATH:"C:\Program Files\nodejs' index.jsx
+web: 'export PATH=$PATH:"C:\Program Files\node' index.jsx
