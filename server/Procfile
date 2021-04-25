@@ -1,1 +1,1 @@
-web: npm install api && node api/src/app.js
+web: node ../../client/pages/index.jsx
