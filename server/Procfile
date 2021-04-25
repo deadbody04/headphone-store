@@ -1,1 +1,1 @@
-web: /usr/local/bin/node index.jsx
+web: 'export PATH=$PATH:"C:\Program Files\nodejs' index.jsx
