@@ -11,7 +11,7 @@
     "dev": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "devDependencies": {},
   "dependencies": {
@@ -32,7 +32,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "be68417a-d97c-41e4-b469-fcfc1da10d95"
+    "uuid": "be68417a-d97c-41e4-b469-fcfc1da10d95",
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
