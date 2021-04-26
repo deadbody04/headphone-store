@@ -32,11 +32,11 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "be68417a-d97c-41e4-b469-fcfc1da10d95",
+    "uuid": "be68417a-d97c-41e4-b469-fcfc1da10d95"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
-    "npm": "^6.0.0"
+    "npm": "^6.x"
   },
   "license": "MIT"
 }
