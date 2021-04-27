@@ -201,19 +201,6 @@ export default function Order(props) {
                                         {colorPicker}
                                     </Tabs>
                                 </Box>
-                                {/*<Box className={classes.quantitySpinner}>*/}
-                                {/*    <Typography variant='h2'*/}
-                                {/*                className={classes.colorSelectorText}>Quantity*/}
-                                {/*    </Typography>*/}
-                                {/*    <input type="number"*/}
-                                {/*           className={classes.inputField}*/}
-                                {/*           ref={spinnerInput}*/}
-                                {/*           onChange={inputChange}*/}
-                                {/*           value={output}*/}
-                                {/*           min={1}*/}
-                                {/*           max={10}*/}
-                                {/*    />*/}
-                                {/*</Box>*/}
                                 {buyButton}
                                 <Box className={classes.accordionSection}>
                                     <AccordionCustom>
