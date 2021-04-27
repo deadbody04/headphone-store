@@ -11,8 +11,7 @@
     "dev": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm install && npm run build",
-    "postinstall": "npm start build"
+    "heroku-postbuild": "npm install && npm run build"
   },
   "devDependencies": {},
   "dependencies": {
