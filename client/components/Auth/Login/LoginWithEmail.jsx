@@ -1,3 +1,4 @@
+import React, { useCallback, useContext, useEffect, useState } from 'react'
 import {
   Typography,
   Grid,
@@ -5,10 +6,18 @@ import {
   Link,
   InputLabel,
   FormControl,
+  Input,
 } from '@material-ui/core'
-import React from 'react'
-import { useStyles, CssEmailField } from './LoginWithEmail.style'
+import { useStyles } from '../AuthStyles/Auth.style'
 import { Facebook, GTranslate } from '@material-ui/icons'
+import { useMutation } from '@apollo/client'
+import * as yup from 'yup'
+import { useFormik } from 'formik'
+
+import { loginUser } from '../../../utils/_mocks_/auth'
+import { AppContext } from '../../../store/providers/AppProvider'
+import { errorMessage } from '../../../utils/_mocks_/errorMessage'
+import LOGIN_USER from '../../../graphql/mutations/LoginUser'
 
 export default function LoginUpWithEmail({ setForm }) {
   const classes = useStyles()
@@ -16,6 +25,45 @@ export default function LoginUpWithEmail({ setForm }) {
   const handleClickChangeState = () => {
     setForm(0)
   }
+
+  const { state, dispatch } = useContext(AppContext)
+  const [login] = useMutation(LOGIN_USER)
+
+  const handleSubmit = useCallback(async (values) => {
+    try {
+      const data = await loginUser(dispatch, login, values)
+      if (!data.user) {
+        setForm(1)
+      } else {
+        console.log('error')
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }, [])
+
+  const initialValues = {
+    identifier: '',
+    password: '',
+  }
+
+  const validationSchema = yup.object({
+    identifier: yup
+      .string()
+      .email('Введите корректный email')
+      .required('Email обязателен для заполнения'),
+    password: yup
+      .string()
+      .min(6, 'Минимальная длина пароля - 6 символов')
+      .required('Пароль обязателен для заполнения'),
+  })
+
+  const formik = useFormik({
+    initialValues: initialValues,
+    validationSchema: validationSchema,
+    onSubmit: handleSubmit,
+    validateOnMount: true,
+  })
 
   return (
     <main>
@@ -41,41 +89,106 @@ export default function LoginUpWithEmail({ setForm }) {
                 </Link>
               </Typography>
             </Grid>
-            <Grid item className={classes.heading}>
-              <Typography variant="h2">
-                <FormControl className={classes.margin}>
-                  <InputLabel shrink className={classes.labelText}>
-                    Email
-                  </InputLabel>
-                  <CssEmailField variant="contained" />
-                </FormControl>
-              </Typography>
-            </Grid>
-            <Grid item className={classes.heading}>
-              <Typography variant="h2">
-                <FormControl className={classes.margin}>
-                  <InputLabel shrink className={classes.labelText}>
-                    Password
-                  </InputLabel>
-                  <CssEmailField variant="contained" />
-                </FormControl>
-              </Typography>
-            </Grid>
-            <Grid item className={classes.heading}>
-              <div className={classes.passwordSection}>
-                <Link className={classes.forgotPassword} href="#">
-                  Forgot password?
-                </Link>
+            <form className={classes.margin}>
+              <Grid item className={classes.heading}>
                 <Typography variant="h2">
-                  <Button
-                    variant="contained"
-                    className={classes.logButtonEmail}
-                  >
-                    Log in
-                  </Button>
+                  <FormControl className={classes.margin}>
+                    <InputLabel
+                      shrink
+                      className={
+                        formik.touched.identifier && formik.errors.identifier
+                          ? classes.labelError
+                          : classes.labelText
+                      }
+                    >
+                      Email
+                    </InputLabel>
+                    <Input
+                      id="identifier"
+                      onBlur={formik.handleBlur}
+                      type="email"
+                      label="Введите email"
+                      name="identifier"
+                      value={formik.values.identifier}
+                      onChange={formik.handleChange}
+                      error={
+                        formik.touched.identifier &&
+                        Boolean(formik.errors.identifier)
+                      }
+                      className={
+                        formik.touched.identifier && formik.errors.identifier
+                          ? classes.inputError
+                          : classes.inputDefault
+                      }
+                      disableUnderline={true}
+                    />
+                    <span className={classes.helperText}>
+                      {formik.touched.identifier
+                        ? formik.errors.identifier
+                        : undefined}
+                    </span>
+                  </FormControl>
                 </Typography>
-              </div>
-            </Grid>
+              </Grid>
+              <Grid item className={classes.heading}>
+                <Typography variant="h2">
+                  <FormControl className={classes.margin}>
+                    <InputLabel
+                      shrink
+                      className={
+                        formik.touched.password && formik.errors.password
+                          ? classes.labelError
+                          : classes.labelText
+                      }
+                    >
+                      Password
+                    </InputLabel>
+                    <Input
+                      id="password"
+                      onBlur={formik.handleBlur}
+                      type="password"
+                      label="Введите пароль"
+                      name="password"
+                      value={formik.values.password}
+                      onChange={formik.handleChange}
+                      error={
+                        formik.touched.password &&
+                        Boolean(formik.errors.password)
+                      }
+                      className={
+                        formik.touched.password && formik.errors.password
+                          ? classes.inputError
+                          : classes.inputDefault
+                      }
+                      disableUnderline={true}
+                    />
+                    <span className={classes.helperText}>
+                      {formik.touched.password
+                        ? formik.errors.password
+                        : undefined}
+                    </span>
+                  </FormControl>
+                </Typography>
+              </Grid>
+
+              <Grid item className={classes.heading}>
+                <div className={classes.passwordSection}>
+                  <Link className={classes.forgotPassword} href="#">
+                    Forgot password?
+                  </Link>
+                  <Typography variant="h2">
+                    <Button
+                      variant="contained"
+                      className={classes.logButtonEmail}
+                      type="submit"
+                      disabled={!formik.isValid}
+                    >
+                      Log in
+                    </Button>
+                  </Typography>
+                </div>
+              </Grid>
+            </form>
             <Grid item>
               <div className={classes.line}>
                 <Typography variant="h2" className={classes.headingLine}>

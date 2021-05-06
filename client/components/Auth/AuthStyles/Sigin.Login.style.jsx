@@ -9,11 +9,21 @@ export const useStyles = makeStyles((theme) => ({
       color: '#FFF',
     },
   },
+  labelError: {
+    fontSize: 20,
+    color: '#FF3D3D',
+    '&:active': {
+      color: '#FF3D3D',
+    },
+  },
   mainGrid: {
     minWidth: '100%',
     height: '100vh',
     background: '#2D2D2D',
     color: '#FFF',
+  },
+  formStyle: {
+    width: 6000,
   },
   margin: {
     width: '100%',

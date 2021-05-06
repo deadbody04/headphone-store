@@ -1,34 +1,4 @@
-import { withStyles, makeStyles } from '@material-ui/core/styles'
-import { InputBase } from '@material-ui/core'
-import React from 'react'
-
-export const CssEmailField = withStyles((theme) => ({
-  root: {
-    border: '0',
-    width: '100%',
-    'label + &': {
-      marginTop: theme.spacing(2),
-      color: '#FFF',
-      '&:focus': {
-        color: '#FFF',
-      },
-    },
-  },
-  input: {
-    color: '#FFF',
-    borderRadius: 0,
-    position: 'relative',
-    borderBottom: '1px solid #B0B0B0',
-    fontSize: 16,
-    paddingLeft: 2,
-    '&:focus': {
-      borderBottom: '1px solid #D0B48F !important',
-    },
-    '&:hover': {
-      borderBottom: '1px solid #FFF',
-    },
-  },
-}))(InputBase)
+import { makeStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme) => ({
   labelText: {
@@ -37,6 +7,72 @@ export const useStyles = makeStyles((theme) => ({
     '&.Mui-focused': {
       color: '#AFAFAF',
     },
+  },
+  labelError: {
+    fontSize: 20,
+    color: '#9B3636',
+    '&.Mui-focused': {
+      color: '#9B3636',
+    },
+  },
+  inputDefault: {
+    '&.MuiInput-root': {
+      border: '0',
+      borderBottom: '1px solid #B0B0B0',
+      width: '100%',
+      'label + &': {
+        marginTop: theme.spacing(2),
+        color: '#FFF',
+        '&.Mui-focused': {
+          color: '#FFF',
+          border: 'none',
+          borderBottom: '1px solid #D0B48F !important',
+        },
+        '&:hover': {
+          borderBottom: '1px solid #FFF',
+        },
+      },
+    },
+    '&.MuiInput-input': {
+      color: '#FFF',
+      borderRadius: 0,
+      position: 'relative',
+      borderBottom: '1px solid #B0B0B0',
+      fontSize: 16,
+      paddingLeft: 2,
+    },
+  },
+  inputError: {
+    '&.MuiInput-root': {
+      marginBottom: 10,
+      border: '0',
+      borderBottom: '1px solid #AE3636',
+      width: '100%',
+      'label + &': {
+        marginTop: theme.spacing(2),
+        color: '#FFF',
+        '&.Mui-focused': {
+          color: '#FFF',
+          border: 'none',
+          borderBottom: '1px solid #AE3636 !important',
+        },
+        '&:hover': {
+          borderBottom: '1px solid #AE3636',
+        },
+      },
+    },
+    '&.MuiInput-input': {
+      color: '#FFF',
+      borderRadius: 0,
+      position: 'relative',
+      borderBottom: '1px solid #B0B0B0',
+      fontSize: 16,
+      paddingLeft: 2,
+    },
+  },
+  helperText: {
+    fontSize: 12,
+    color: '#9B3636',
   },
   mainGrid: {
     minWidth: '100%',
@@ -50,7 +86,7 @@ export const useStyles = makeStyles((theme) => ({
   container: {
     width: 325,
     position: 'relative',
-    top: 'calc(50% - 230px)',
+    top: 'calc(50% - 300px)',
     margin: 'auto',
   },
   headingSignUp: {
@@ -111,7 +147,7 @@ export const useStyles = makeStyles((theme) => ({
     borderBottom: '1px solid #B0B0B0',
   },
   heading: {
-    marginTop: 10,
+    marginTop: 12,
     width: '100%',
   },
   closeButton: {

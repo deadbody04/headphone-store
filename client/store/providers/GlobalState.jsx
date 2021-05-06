@@ -1,18 +1,18 @@
 import React, { useReducer } from 'react'
-import Context from './Context'
-import Reducer from './Reducer'
-import Products from '../components/Data/Products'
+import Context from '../controllers/Context'
+import reducer from '../reducers/reducer'
+import Products from '../../components/Data/Products'
 import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   REMOVE_QUANTITY,
   ADD_QUANTITY,
-} from './Types'
+} from '../types/types'
 
 export default function GlobalState(props) {
   const { products } = Products
 
-  const [state, dispatch] = useReducer(Reducer, { carts: [] })
+  const [state, dispatch] = useReducer(reducer, { carts: [] })
 
   const addProductToCart = (product) => {
     dispatch({

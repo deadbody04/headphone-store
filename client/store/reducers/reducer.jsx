@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, REMOVE_QUANTITY, ADD_QUANTITY } from "./Types";
+import { ADD_TO_CART, REMOVE_FROM_CART, REMOVE_QUANTITY, ADD_QUANTITY } from "../types/types";
 
 const addProductToCart = (state, product, quantity) => {
     const copy = [...state.carts];

@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core'
 import { useStyles } from './BestSound.style'
 import classNames from 'classnames'
-import Context from '../../store/Context'
+import Context from '../../store/controllers/Context'
 import Order from '../Order'
 
 export default function BestSound(props) {

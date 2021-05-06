@@ -10,7 +10,7 @@ import classNames from 'classnames'
 import React, { useContext, useState } from 'react'
 import { useStyles } from './Content.style'
 import Order from '../Order'
-import Context from '../../store/Context'
+import Context from '../../store/controllers/Context'
 
 export default function Content(
   addProductToCart,

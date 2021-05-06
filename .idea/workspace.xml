@@ -20,15 +20,106 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.env.development" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.env.production" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Auth/AuthStyles/Auth.style.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Auth/AuthStyles/Sigin.Login.style.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/HomePage/HomePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/HomePage/HomePage.style.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/HomePage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/graphql/apolloClient.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/graphql/mutations/LoginUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/graphql/mutations/RegisterUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/actions/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/controllers/AppController.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/providers/AppProvider.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/reducers/authReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/types/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/utils/_mocks_/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/utils/_mocks_/errorMessage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Data/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Data/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/client/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/headphone-shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/headphone-shop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/jsLinters/eslint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/prettier.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/client/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/babel.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/babel.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/AsFeaturedOn/AsFeaturedOn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/AsFeaturedOn/AsFeaturedOn.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/AsFeaturedOn/AsFeaturedOn.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/AsFeaturedOn/AsFeaturedOn.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.style.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUp.style.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUpWithEmail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUpWithEmail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/BestSound/BestSound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/BestSound/BestSound.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/BestSound/BestSound.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/BestSound/BestSound.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Cart/Cart.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Cart/Cart.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Cart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Content/Content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Content/Content.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Content/Content.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EastFlowIcon/EastFlowIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EastFlowIcon/EastFlowIcon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmailDistribution/EmailDistribution.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmailDistribution/EmailDistribution.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/EmailDistribution/EmailDistribution.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmailDistribution/EmailDistribution.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Footer/Footer.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Footer/Footer.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/InstrumentalIcon/InstrumentalIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/InstrumentalIcon/InstrumentalIcon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/MainContent/MainContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MainContent/MainContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/MainContent/MainContent.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MainContent/MainContent.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/MainContent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MainContent/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Menu/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Menu/Header.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/Header.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Order/Order.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Order/Order.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/Context.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/Context.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Order/Order.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Order/Order.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Order/Products.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Order/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/OtherLinks/OtherLinks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/OtherLinks/OtherLinks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/OtherLinks/OtherLinks.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/OtherLinks/OtherLinks.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Product/ProductInCart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Product/ProductInCart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Product/ProductInCart.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Product/ProductInCart.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Product/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Reviews/Reviews.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Reviews/Reviews.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Reviews/Reviews.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/RockIcon/RockIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/RockIcon/RockIcon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/SideCart/SideCart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SideCart/SideCart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/SideCart/SideCart.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SideCart/SideCart.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/TuneIcon/TuneIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/TuneIcon/TuneIcon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/WaveIcon/WaveIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/WaveIcon/WaveIcon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_document.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_document.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/api/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/api/hello.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/Context.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/controllers/Context.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/GlobalState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/providers/GlobalState.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/Reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/reducers/reducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/Types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/types/types.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +137,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/components/MainContent" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -53,8 +147,23 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\headphone-store\client\components\Auth" />
+      <recent name="C:\headphone-store\client\components\AuthStyles" />
+      <recent name="C:\headphone-store\client\store\controllers" />
+      <recent name="C:\headphone-store\client\store\providers" />
+      <recent name="C:\headphone-store\client\store" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\headphone-store\client\components\MainContent" />
+      <recent name="C:\headphone-store\client\components\HomePage" />
+      <recent name="C:\headphone-store\client\components\Order" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -62,6 +171,16 @@
       <command value="run" />
       <scripts>
         <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -89,6 +208,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.develop" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.strapi" />
@@ -131,6 +251,28 @@
       <workItem from="1619424071709" duration="5146000" />
       <workItem from="1619504875222" duration="2348000" />
       <workItem from="1619508516632" duration="4278000" />
+      <workItem from="1619519142155" duration="595000" />
+      <workItem from="1619674842943" duration="1565000" />
+      <workItem from="1619677149886" duration="137000" />
+      <workItem from="1619677312886" duration="237000" />
+      <workItem from="1619677570716" duration="2477000" />
+      <workItem from="1619683235904" duration="5203000" />
+      <workItem from="1619688540294" duration="614000" />
+      <workItem from="1619689714188" duration="57000" />
+      <workItem from="1619689812147" duration="2210000" />
+      <workItem from="1619757222354" duration="6333000" />
+      <workItem from="1619766642630" duration="2519000" />
+      <workItem from="1619771770438" duration="9858000" />
+      <workItem from="1619782602731" duration="205000" />
+      <workItem from="1619795143997" duration="1581000" />
+      <workItem from="1619930637908" duration="6122000" />
+      <workItem from="1620097463460" duration="6610000" />
+      <workItem from="1620114227668" duration="4023000" />
+      <workItem from="1620133925758" duration="4321000" />
+      <workItem from="1620183900514" duration="1846000" />
+      <workItem from="1620219908506" duration="7011000" />
+      <workItem from="1620230180209" duration="1887000" />
+      <workItem from="1620270233038" duration="3188000" />
     </task>
     <servers />
   </component>
@@ -157,25 +299,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="586" y="198" key="#Inspections/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619085715403" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1619088679166">
+    <state x="743" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619678792977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619088679166" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1619088679165">
+    <state x="743" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619678792977" />
+    <state x="669" y="178" key="#next.config.js" timestamp="1619931905768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619088679165" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1619088679165">
+    <state x="669" y="178" key="#next.config.js/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619931905768" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1619937467452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619088679165" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1619088679165">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619937467452" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1619688494943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619088679165" />
-    <state x="238" y="126" width="1200" height="708" key="SettingsEditor" timestamp="1619508843708">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619688494943" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1619688494942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="238" y="126" width="1200" height="708" key="SettingsEditor/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619508843708" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619688494942" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1619688494942">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619688494942" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1619688494943">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619688494943" />
+    <state x="807" y="222" key="RollbackChangesDialog" timestamp="1619680049528">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="807" y="222" key="RollbackChangesDialog/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619680049528" />
+    <state x="720" y="127" width="1200" height="708" key="SettingsEditor" timestamp="1619677550641">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="720" y="127" width="1200" height="708" key="SettingsEditor/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619677550641" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1620224369491">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1620224369491" />
   </component>
 </project>

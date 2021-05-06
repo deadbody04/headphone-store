@@ -1,0 +1,12 @@
+.git/
+.gitignore
+.next/
+.dockerignore
+Dockerfile
+Dockerfile.dev
+node_modules/
+coverage/
+.env
+.env.development
+.env.test
+.env.production

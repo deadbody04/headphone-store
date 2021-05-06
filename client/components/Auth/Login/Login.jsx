@@ -1,6 +1,6 @@
 import { Typography, Grid, Button, Link, IconButton } from '@material-ui/core'
 import React from 'react'
-import { useStyles } from '../SignUp/SignUp.style'
+import { useStyles } from '../AuthStyles/Sigin.Login.style'
 import { Close } from '@material-ui/icons'
 
 export default function Login({ setForm }) {
