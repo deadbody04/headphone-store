@@ -34,6 +34,9 @@ export const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 20,
+    },
   },
   orderButton: {
     padding: 0,
@@ -50,6 +53,10 @@ export const useStyles = makeStyles((theme) => ({
     '&:hover': {
       background: '#FFF',
     },
+    [theme.breakpoints.down('sm')]: {
+      width: 60,
+      height: 30,
+    },
   },
   homePart: {
     height: 650,
@@ -61,12 +68,18 @@ export const useStyles = makeStyles((theme) => ({
     '&:hover': {
       color: '#7C6955',
     },
+    [theme.breakpoints.down('sm')]: {
+      marginRight: 10,
+    },
   },
   headIcon: {
     position: 'absolute',
     padding: 0,
     marginLeft: -40,
     fontSize: 32,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 22,
+    },
   },
   linkIcons: {
     position: 'relative',

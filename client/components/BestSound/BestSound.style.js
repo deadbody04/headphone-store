@@ -5,10 +5,13 @@ export const useStyles = makeStyles((theme) => ({
     height: 600,
     background: '#E3CBAA',
     color: '#FFF',
+    [theme.breakpoints.down('sm')]: {
+      height: 900,
+    },
   },
   gridTextFirst: {
     maxWidth: 450,
-    marginLeft: '25%',
+    margin: 'auto',
   },
   gridTextSecond: {
     marginTop: '15%',
@@ -29,8 +32,18 @@ export const useStyles = makeStyles((theme) => ({
   textAbout: {
     paddingBottom: 30,
   },
+  image: {
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      height: 'auto',
+    },
+  },
   gridItems: {
     marginBlock: '10%',
+    width: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   nameOfModel: {
     fontSize: 50,

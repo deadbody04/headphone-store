@@ -7,6 +7,9 @@ export const useStyles = makeStyles((theme) => ({
     width: '100%',
     background: '#2D2D2D',
     margin: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 'auto',
+    },
   },
   boxGrid: {
     width: 655,

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import { useStyles } from './Header.style'
 import {
   AppBar,
@@ -20,6 +20,9 @@ import {
   ShoppingBasket,
   Close,
 } from '@material-ui/icons'
+
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { useTheme } from '@material-ui/core/styles'
 
 import Order from '../Order/Order'
 import SignUp from '../Auth/SignUp/SignUp'
@@ -44,6 +47,7 @@ export default function Header({
   ...props
 }) {
   const classes = useStyles()
+  const theme = useTheme()
 
   const [open, setOpen] = useState(false)
   const [form, setForm] = useState(0)
@@ -68,225 +72,531 @@ export default function Header({
   const handleClickOpen = () => {
     setOpen(true)
   }
-
   const handleClose = () => {
     setOpen(false)
   }
-  const handleIconClick = () => {
-    setOpen(false)
-  }
-
   const openOrder = () => {
     setForm(4)
   }
   const openSignPage = () => {
     setForm(0)
   }
+  const matches = useMediaQuery(theme.breakpoints.up('sm'))
+  const matchesLow = useMediaQuery(theme.breakpoints.up('xs'))
+  const matchesHight = useMediaQuery(theme.breakpoints.up('xl'))
+  const matchesMid = useMediaQuery(theme.breakpoints.up('lg'))
+
+  const FullSize = () => {
+    return (
+      <Typography variant="h5" className={classes.title}>
+        <Link
+          href="#"
+          color="inherit"
+          className={classes.menuLink}
+          underline="none"
+        >
+          <Headset className={classes.headIcon} />
+          Soundbeam
+        </Link>
+        <Link
+          href="#"
+          variant="body2"
+          color="inherit"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={800}
+          className={classes.menuLinks}
+          underline="none"
+        >
+          Home
+        </Link>
+        <Link
+          href="#"
+          variant="body2"
+          color="inherit"
+          to="content"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={800}
+          className={classes.menuLinks}
+          underline="none"
+        >
+          Benefits
+        </Link>
+        <Link
+          href="#"
+          variant="body2"
+          color="inherit"
+          to="reviews"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={1400}
+          className={classes.menuLinks}
+          underline="none"
+        >
+          Reviews
+        </Link>
+      </Typography>
+    )
+  }
+  const SmallSize = () => {
+    return (
+      <Typography variant="h5" className={classes.title}>
+        <Link
+          href="#"
+          color="inherit"
+          className={classes.menuLink}
+          underline="none"
+        >
+          <Headset className={classes.headIcon} />
+          Soundbeam
+        </Link>
+      </Typography>
+    )
+  }
 
   return (
     <AppBar className={classes.header}>
       <Container className={classes.flexHead} fixed>
         <Toolbar className={classes.headerMenu} variant="regular">
-          <Typography variant="h5" className={classes.title}>
-            <Link
-              href="#"
-              color="inherit"
-              className={classes.menuLink}
-              underline="none"
-              onClick={handleIconClick}
-            >
-              <Headset className={classes.headIcon} />
-              Soundbeam
-            </Link>
-            <Link
-              href="#"
-              variant="body2"
-              color="inherit"
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={800}
-              className={classes.menuLinks}
-              underline="none"
-            >
-              Home
-            </Link>
-            <Link
-              href="#"
-              variant="body2"
-              color="inherit"
-              to="content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={800}
-              className={classes.menuLinks}
-              underline="none"
-            >
-              Benefits
-            </Link>
-            <Link
-              href="#"
-              variant="body2"
-              color="inherit"
-              to="reviews"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={1400}
-              className={classes.menuLinks}
-              underline="none"
-            >
-              Reviews
-            </Link>
-          </Typography>
+          {matches !== true ? <SmallSize /> : <FullSize />}
           <Typography>
-            <Link
-              href="#"
-              variant="body2"
-              color="inherit"
-              className={classes.menuButtons}
-              onClick={handleClickOpen}
-            >
-              <AccountCircle
-                className={classNames(classes.linkIcons, classes.logInIcon)}
-              />
-            </Link>
-            <Link
-              href="#"
-              variant="body2"
-              color="inherit"
-              className={classNames(classes.menuButtons, classes.logText)}
-              underline="none"
-              onClick={() => {
-                handleClickOpen()
-                openSignPage()
-              }}
-            >
-              Log in
-            </Link>
-            {openButton ? (
-              <Button
-                className={classNames(classes.menuButtons, classes.orderButton)}
-                href="#contained-buttons"
-                disableElevation
-              >
-                Order Now
-              </Button>
-            ) : (
-              <Button
-                className={classNames(classes.menuButtons, classes.orderButton)}
-                href="#contained-buttons"
-                disableElevation
-                onClick={() => {
-                  openOrder()
-                  handleClickOpen()
-                }}
-              >
-                Order Now
-              </Button>
-            )}
-            <Dialog open={open} fullScreen>
-              <Grid className={classes.mainGrid}>
-                {form === 0 ? (
-                  <>
-                    <IconButton
-                      className={classes.closeButton}
-                      onClick={handleClose}
-                    >
-                      <Close />
-                    </IconButton>
-                    <SignUp setForm={setForm} />
-                  </>
-                ) : form === 1 ? (
-                  <>
-                    <IconButton
-                      className={classes.closeButton}
-                      onClick={handleClose}
-                    >
-                      <Close />
-                    </IconButton>
-                    <Login setForm={setForm} />
-                  </>
-                ) : form === 2 ? (
-                  <>
-                    <IconButton
-                      className={classes.closeButton}
-                      onClick={handleClose}
-                    >
-                      <Close />
-                    </IconButton>
-                    <SignUpWithEmail setForm={setForm} />
-                  </>
-                ) : form === 3 ? (
-                  <>
-                    <IconButton
-                      className={classes.closeButton}
-                      onClick={handleClose}
-                    >
-                      <Close />
-                    </IconButton>
-                    <LoginWithEmail setForm={setForm} />
-                  </>
-                ) : form === 4 ? (
-                  <Order
-                    product={product}
-                    setForm={setForm}
-                    setOpen={setOpen}
-                    addProductToCart={context.addProductToCart}
-                    handleClose={handleClose}
+            {matchesHight === true || matchesMid === true ? (
+              <>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classes.menuButtons}
+                  onClick={handleClickOpen}
+                >
+                  <AccountCircle
+                    className={classNames(classes.linkIcons, classes.logInIcon)}
                   />
-                ) : form === 5 ? (
-                  <>
-                    <Cart
-                      product={product}
-                      carts={context.carts}
-                      setOpen={setOpen}
-                      handleClose={handleClose}
-                      removeProductFromCart={context.removeProductFromCart}
-                      removeQuantity={context.removeQuantity}
-                      addQuantity={context.addQuantity}
-                      addProductToCart={context.addProductToCart}
-                    />
-                  </>
+                </Link>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classNames(classes.menuButtons, classes.logText)}
+                  underline="none"
+                  onClick={() => {
+                    handleClickOpen()
+                    openSignPage()
+                  }}
+                >
+                  Log in
+                </Link>
+                {openButton ? (
+                  <Button
+                    className={classNames(
+                      classes.menuButtons,
+                      classes.orderButton
+                    )}
+                    href="#contained-buttons"
+                    disableElevation
+                  >
+                    Order Now
+                  </Button>
                 ) : (
-                  <>
-                    <IconButton
-                      className={classes.closeButton}
-                      onClick={handleClose}
-                    >
-                      <Close />
-                    </IconButton>
-                    <SignUp setForm={setForm} />
-                  </>
+                  <Button
+                    className={classNames(
+                      classes.menuButtons,
+                      classes.orderButton
+                    )}
+                    href="#contained-buttons"
+                    disableElevation
+                    onClick={() => {
+                      openOrder()
+                      handleClickOpen()
+                    }}
+                  >
+                    Order Now
+                  </Button>
                 )}
-              </Grid>
-            </Dialog>
-            <Link
-              href="#"
-              variant="body2"
-              color="inherit"
-              className={classes.menuButtons}
-            >
-              <Instagram className={classes.linkIcons} />
-            </Link>
-            <Link
-              href="#"
-              variant="body2"
-              color="inherit"
-              className={classes.menuButtons}
-            >
-              <YouTube className={classes.linkIcons} />
-            </Link>
-            <Link
-              href="#"
-              variant="body2"
-              color="inherit"
-              className={classes.menuButtons}
-            >
-              <Twitter className={classes.linkIcons} />
-            </Link>
+                <Dialog open={open} fullScreen>
+                  <Grid className={classes.mainGrid}>
+                    {form === 0 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <SignUp setForm={setForm} />
+                      </>
+                    ) : form === 1 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <Login setForm={setForm} />
+                      </>
+                    ) : form === 2 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <SignUpWithEmail setForm={setForm} />
+                      </>
+                    ) : form === 3 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <LoginWithEmail setForm={setForm} />
+                      </>
+                    ) : form === 4 ? (
+                      <Order
+                        product={product}
+                        setForm={setForm}
+                        setOpen={setOpen}
+                        addProductToCart={context.addProductToCart}
+                        handleClose={handleClose}
+                      />
+                    ) : form === 5 ? (
+                      <>
+                        <Cart
+                          product={product}
+                          carts={context.carts}
+                          setOpen={setOpen}
+                          handleClose={handleClose}
+                          removeProductFromCart={context.removeProductFromCart}
+                          removeQuantity={context.removeQuantity}
+                          addQuantity={context.addQuantity}
+                          addProductToCart={context.addProductToCart}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <SignUp setForm={setForm} />
+                      </>
+                    )}
+                  </Grid>
+                </Dialog>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classes.menuButtons}
+                >
+                  <Instagram className={classes.linkIcons} />
+                </Link>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classes.menuButtons}
+                >
+                  <YouTube className={classes.linkIcons} />
+                </Link>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classes.menuButtons}
+                >
+                  <Twitter className={classes.linkIcons} />
+                </Link>
+              </>
+            ) : matches !== true && matchesLow === true ? (
+              <>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classes.menuButtons}
+                  onClick={handleClickOpen}
+                />
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classNames(classes.menuButtons, classes.logText)}
+                  underline="none"
+                  onClick={() => {
+                    handleClickOpen()
+                    openSignPage()
+                  }}
+                >
+                  Log in
+                </Link>
+                {openButton ? (
+                  <Button
+                    className={classNames(
+                      classes.menuButtons,
+                      classes.orderButton
+                    )}
+                    href="#contained-buttons"
+                    disableElevation
+                  >
+                    Order Now
+                  </Button>
+                ) : (
+                  <Button
+                    className={classNames(
+                      classes.menuButtons,
+                      classes.orderButton
+                    )}
+                    href="#contained-buttons"
+                    disableElevation
+                    onClick={() => {
+                      openOrder()
+                      handleClickOpen()
+                    }}
+                  >
+                    Order Now
+                  </Button>
+                )}
+                <Dialog open={open} fullScreen>
+                  <Grid className={classes.mainGrid}>
+                    {form === 0 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <SignUp setForm={setForm} />
+                      </>
+                    ) : form === 1 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <Login setForm={setForm} />
+                      </>
+                    ) : form === 2 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <SignUpWithEmail setForm={setForm} />
+                      </>
+                    ) : form === 3 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <LoginWithEmail setForm={setForm} />
+                      </>
+                    ) : form === 4 ? (
+                      <Order
+                        product={product}
+                        setForm={setForm}
+                        setOpen={setOpen}
+                        addProductToCart={context.addProductToCart}
+                        handleClose={handleClose}
+                      />
+                    ) : form === 5 ? (
+                      <>
+                        <Cart
+                          product={product}
+                          carts={context.carts}
+                          setOpen={setOpen}
+                          handleClose={handleClose}
+                          removeProductFromCart={context.removeProductFromCart}
+                          removeQuantity={context.removeQuantity}
+                          addQuantity={context.addQuantity}
+                          addProductToCart={context.addProductToCart}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <SignUp setForm={setForm} />
+                      </>
+                    )}
+                  </Grid>
+                </Dialog>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classes.menuButtons}
+                  onClick={handleClickOpen}
+                />
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classNames(classes.menuButtons, classes.logText)}
+                  underline="none"
+                  onClick={() => {
+                    handleClickOpen()
+                    openSignPage()
+                  }}
+                >
+                  Log in
+                </Link>
+                {openButton ? (
+                  <Button
+                    className={classNames(
+                      classes.menuButtons,
+                      classes.orderButton
+                    )}
+                    href="#contained-buttons"
+                    disableElevation
+                  >
+                    Order Now
+                  </Button>
+                ) : (
+                  <Button
+                    className={classNames(
+                      classes.menuButtons,
+                      classes.orderButton
+                    )}
+                    href="#contained-buttons"
+                    disableElevation
+                    onClick={() => {
+                      openOrder()
+                      handleClickOpen()
+                    }}
+                  >
+                    Order Now
+                  </Button>
+                )}
+                <Dialog open={open} fullScreen>
+                  <Grid className={classes.mainGrid}>
+                    {form === 0 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <SignUp setForm={setForm} />
+                      </>
+                    ) : form === 1 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <Login setForm={setForm} />
+                      </>
+                    ) : form === 2 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <SignUpWithEmail setForm={setForm} />
+                      </>
+                    ) : form === 3 ? (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <LoginWithEmail setForm={setForm} />
+                      </>
+                    ) : form === 4 ? (
+                      <Order
+                        product={product}
+                        setForm={setForm}
+                        setOpen={setOpen}
+                        addProductToCart={context.addProductToCart}
+                        handleClose={handleClose}
+                      />
+                    ) : form === 5 ? (
+                      <>
+                        <Cart
+                          product={product}
+                          carts={context.carts}
+                          setOpen={setOpen}
+                          handleClose={handleClose}
+                          removeProductFromCart={context.removeProductFromCart}
+                          removeQuantity={context.removeQuantity}
+                          addQuantity={context.addQuantity}
+                          addProductToCart={context.addProductToCart}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <IconButton
+                          className={classes.closeButton}
+                          onClick={handleClose}
+                        >
+                          <Close />
+                        </IconButton>
+                        <SignUp setForm={setForm} />
+                      </>
+                    )}
+                  </Grid>
+                </Dialog>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classes.menuButtons}
+                >
+                  <Instagram className={classes.linkIcons} />
+                </Link>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classes.menuButtons}
+                >
+                  <YouTube className={classes.linkIcons} />
+                </Link>
+                <Link
+                  href="#"
+                  variant="body2"
+                  color="inherit"
+                  className={classes.menuButtons}
+                >
+                  <Twitter className={classes.linkIcons} />
+                </Link>
+              </>
+            )}
+
             {['right'].map((anchor) => (
               <React.Fragment key={anchor}>
                 <Link

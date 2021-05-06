@@ -17,7 +17,7 @@ const image =
 const image2 =
   'https://static.wixstatic.com/media/82fcd3_6722574f5e26430090bb86df75c063ae~mv2_d_4724_3072_s_4_2.jpg/v1/fill/w_1432,h_866,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_6722574f5e26430090bb86df75c063ae~mv2_d_4724_3072_s_4_2.webp'
 
-export default function MainContent() {
+export default function HomePage() {
   const classes = useStyles()
   return (
     <>
@@ -28,7 +28,7 @@ export default function MainContent() {
       <Parallax bgImage={image} strength={600} className={classes.infoAboutHP}>
         <Box id="content">
           <Grid container spacing={0} className={classes.mainGridCont}>
-            <Grid item className={classes.gridItems} xs={3}>
+            <Grid item className={classes.gridItems}>
               <Box className={classes.gridTextFirst}>
                 <Typography variant="h6">
                   <p>
@@ -45,7 +45,7 @@ export default function MainContent() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item className={classes.gridItems} xs={3}>
+            <Grid item className={classes.gridItems} >
               <Box className={classes.gridTexSecond}>
                 <Typography variant="h6">
                   <p>
@@ -61,7 +61,7 @@ export default function MainContent() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item className={classes.gridItems} xs={3}>
+            <Grid item className={classes.gridItems} >
               <Box className={classes.gridTextFirst}>
                 <Typography variant="h6">
                   <p>
@@ -77,7 +77,7 @@ export default function MainContent() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item className={classes.gridItems} xs={3}>
+            <Grid item className={classes.gridItems} >
               <Box className={classes.gridTexSecond}>
                 <Typography variant="h6">
                   <p>

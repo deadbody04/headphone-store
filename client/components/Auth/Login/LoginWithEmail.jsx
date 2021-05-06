@@ -50,12 +50,12 @@ export default function LoginUpWithEmail({ setForm }) {
   const validationSchema = yup.object({
     identifier: yup
       .string()
-      .email('Введите корректный email')
-      .required('Email обязателен для заполнения'),
+      .email('Please enter correct email')
+      .required('Email required'),
     password: yup
       .string()
-      .min(6, 'Минимальная длина пароля - 6 символов')
-      .required('Пароль обязателен для заполнения'),
+      .min(6, 'Minimum length - 6')
+      .required('Password required'),
   })
 
   const formik = useFormik({

@@ -38,6 +38,9 @@ export const useStyles = makeStyles((theme) => ({
     paddingBottom: 30,
     paddingTop: 30,
     borderBottom: 'solid 1px #575757',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   imgBox: {
     border: 'solid 1px #585858',
@@ -123,12 +126,23 @@ export const useStyles = makeStyles((theme) => ({
   firstGrid: {
     width: 615,
     height: 235,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   secondGrid: {
     width: 280,
     height: 235,
     marginLeft: 'auto',
     borderBottom: 'solid 1px #575757',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+  },
+  thirdGrid: {
+    marginLeft: 'auto',
+    width: 280,
+    marginTop: 80,
   },
   boxTitleFirst: {
     color: '#FFF',
@@ -154,6 +168,9 @@ export const useStyles = makeStyles((theme) => ({
     font: 'var(--fnt,var(--font_5))',
     color: '#FFF',
     opacity: 0.8,
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+    },
   },
   subtotalPrice: {
     fontSize: 16,
@@ -161,6 +178,9 @@ export const useStyles = makeStyles((theme) => ({
   },
   subtotalPriceRight: {
     marginLeft: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      marginRight: 'auto',
+    },
   },
   shippingPriceBox: {
     width: '100%',
@@ -168,6 +188,9 @@ export const useStyles = makeStyles((theme) => ({
     color: '#FFF',
     opacity: 0.8,
     marginTop: 25,
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+    },
   },
   shipping: {
     marginRight: 'auto',
@@ -205,11 +228,17 @@ export const useStyles = makeStyles((theme) => ({
       background: '#CAAF8B',
       transition: 'all 0.4s ease',
     },
+    [theme.breakpoints.down('sm')]: {
+      width: 50,
+    },
   },
-  thirdGrid: {
-    marginLeft: 'auto',
-    width: 280,
-    marginTop: 80,
+  close: {
+    zIndex: 999999,
+    width: 165,
+    height: 40,
+    position: 'absolute',
+    top: 30,
+    left: 40,
   },
   totalPrice: {
     font: 'var(--fnt,var(--font_5))',

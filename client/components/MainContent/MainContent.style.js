@@ -8,29 +8,58 @@ export const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundImage: `url('https://static.wixstatic.com/media/82fcd3_1e4cb7a7053948998237a43286bee5bf~mv2_d_3840_1470_s_2.jpg/v1/fill/w_1903,h_752,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_1e4cb7a7053948998237a43286bee5bf~mv2_d_3840_1470_s_2.webp')`,
+    [theme.breakpoints.down('sm')]: {
+      height: '550px',
+    },
   },
   infoAboutHP: {
     color: '#FFF',
     height: 770,
     width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      height: 1000,
+    },
   },
   mainGridCont: {
     height: 770,
+    [theme.breakpoints.down('sm')]: {
+      height: 1000,
+    },
   },
   gridItems: {
     backgroundColor: 'rgba(0,0,0,0.5)',
     borderRight: '1px solid rgba(0,0,0,0)',
     backgroundClip: 'content-box',
+    width: '25%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      height: 250,
+      borderBottom: '1px solid rgba(0,0,0,0)',
+    },
   },
   gridTextFirst: {
     marginTop: '70%',
     width: '200px',
     margin: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+      height: 250,
+      marginTop: '5%',
+      marginLeft: '5%',
+      margin: 'auto',
+    },
   },
   gridTexSecond: {
     marginTop: '45%',
     width: '200px',
     margin: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+      height: 250,
+      marginTop: '5%',
+      marginLeft: '5%',
+      margin: 'auto',
+    },
   },
   featuredOn: {
     width: '100%',

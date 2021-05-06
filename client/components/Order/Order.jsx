@@ -14,10 +14,11 @@ import EmailDistribution from '../EmailDistribution/EmailDistribution'
 import OtherLinks from '../OtherLinks/OtherLinks'
 import Footer from '../Footer/Footer'
 import Products from '../Data/Products'
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { useStyles, AntTab, AccordionCustom } from './Order.style'
 import PropTypes from 'prop-types'
 import { Add } from '@material-ui/icons'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -54,9 +55,8 @@ export default function Order(props) {
 
   const [openButton, setOpenButton] = useState(1)
   const [value, setValue] = useState(0)
-  const [output, setOutput] = useState(1)
 
-  const { addProductToCart, setOpen, setForm, handleClose } = props
+  const { addProductToCart, setOpen, setForm } = props
 
   const { products } = Products
 
@@ -67,11 +67,6 @@ export default function Order(props) {
   const handleClosePage = () => {
     setOpen(false)
   }
-  //
-  // function inputChange() {
-  //     setOutput(spinnerInput.current.value)
-  //     console.log(spinnerInput.current)
-  // }
 
   const allProducts = products.map((item) => {
     return (
@@ -90,7 +85,7 @@ export default function Order(props) {
         index={item.id}
         className={classes.imgBox}
       >
-        <img src={item.img} alt="headphones" />
+        <img src={item.img} alt="headphones" className={classes.image} />
       </TabPanel>
     )
   })
@@ -126,8 +121,7 @@ export default function Order(props) {
             variant="outlined"
             onClick={() => addProductToCart(item)}
           >
-            {' '}
-            Order Now{' '}
+            Order Now
           </Button>
         </Box>
         <Box>
@@ -141,8 +135,9 @@ export default function Order(props) {
 
   return (
     <main>
+      <Button className={classes.close} onClick={handleClosePage} />
       <div className={classes.headerSection}>
-        <Header openButton={() => openButton} handleClose={() => handleClose} />
+        <Header openButton={openButton} />
         <Grid item container className={classes.mainSection}>
           <Grid container className={classes.mainGrid}>
             <Grid item>
@@ -154,13 +149,13 @@ export default function Order(props) {
                   onClick={handleClosePage}
                 >
                   Home
-                </Link>{' '}
+                </Link>
                 /
                 <span className={classes.nameOfModel}>
                   Soundbeam ERD - 3083
                 </span>
               </Typography>
-              <Box>
+              <Box className={classes.imgBox}>
                 {productsPhoto}
                 <AppBar position="static" className={classes.switchBox}>
                   <Tabs
@@ -193,8 +188,7 @@ export default function Order(props) {
               </Typography>
               <Box className={classes.colorSelection}>
                 <Typography variant="h2" className={classes.colorSelectorText}>
-                  {' '}
-                  {colorName}{' '}
+                  {colorName}
                 </Typography>
                 <Tabs
                   value={value}

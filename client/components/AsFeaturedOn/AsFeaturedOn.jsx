@@ -14,23 +14,23 @@ export default function AsFeaturedOn() {
     <main>
       <Box className={classes.featuredOn}>
         <Container className={classes.allContent}>
-          <Grid container spacing={1} className={classes.MainGrid}>
+          <Grid container className={classes.MainGrid}>
             <Grid container item xs={12} spacing={0}>
               <Grid item xs={2} className={classes.gridElement}>
                 <Box className={classes.paper}>
-                  <Typography style={{ padding: 20 }}>
+                  <Typography className={classes.title}>
                     As Featured On:
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={2} className={classes.gridElement}>
+              <Grid item className={classes.gridElement}>
                 <Box className={classes.paper}>
                   <Link href="">
                     <TuneIcon />
                   </Link>
                 </Box>
               </Grid>
-              <Grid item xs={2} className={classes.gridElement}>
+              <Grid item className={classes.gridElement}>
                 <Box className={classes.paper}>
                   <Link href="">
                     <EastFlowIcon />
@@ -45,21 +45,21 @@ export default function AsFeaturedOn() {
               spacing={0}
               className={classes.secondGrid}
             >
-              <Grid item xs={2} className={classes.gridElement}>
+              <Grid item className={classes.gridElement}>
                 <Box className={classes.paper}>
                   <Link href="">
                     <RockIcon />
                   </Link>
                 </Box>
               </Grid>
-              <Grid item xs={2} className={classes.gridElement}>
+              <Grid item className={classes.gridElement}>
                 <Box className={classes.paper}>
                   <Link href="">
                     <InstrumentalIcon />
                   </Link>
                 </Box>
               </Grid>
-              <Grid item xs={2} className={classes.gridElement}>
+              <Grid item className={classes.gridElement}>
                 <Box className={classes.paper}>
                   <Link href="">
                     <WaveIcon />

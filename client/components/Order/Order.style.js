@@ -35,6 +35,17 @@ export const useStyles = makeStyles((theme) => ({
     width: '100%',
     minHeight: 700,
     margin: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '10%',
+    },
+  },
+  close: {
+    zIndex: 999999,
+    width: 165,
+    height: 40,
+    position: 'absolute',
+    top: 30,
+    left: 40,
   },
   headerSection: {
     background: '#2D2D2D',
@@ -80,6 +91,9 @@ export const useStyles = makeStyles((theme) => ({
       background: '#9F8B71',
       transition: 'all 0.4s ease',
     },
+    [theme.breakpoints.down('sm')]: {
+      width: 300,
+    },
   },
   buttonBuy: {
     marginTop: 10,
@@ -98,6 +112,9 @@ export const useStyles = makeStyles((theme) => ({
       background: '#C0C0C0',
       transition: 'all 0.4s ease',
     },
+    [theme.breakpoints.down('sm')]: {
+      width: 300,
+    },
   },
   colorSelection: {
     marginTop: 20,
@@ -110,15 +127,41 @@ export const useStyles = makeStyles((theme) => ({
     background: 'transparent',
     border: 'none',
     boxShadow: 'none',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+  },
+  headIcon: {
+    width: 25,
+    height: 30,
+    objectFit: 'cover',
+    [theme.breakpoints.down('sm')]: {
+      margin: 'auto',
+      alignItems: 'center',
+      textAlign: 'center',
+    },
   },
   imgBox: {
-    minHeight: 500,
     minWidth: 500,
+    minHeight: 500,
+    [theme.breakpoints.down('sm')]: {
+      minWidth: 300,
+      minHeight: 300,
+    },
+  },
+  image: {
+    [theme.breakpoints.down('sm')]: {
+      width: 300,
+      height: 300,
+    },
   },
   bottomParagraph: {
     width: 460,
     marginTop: 20,
     fontSize: 14,
+    [theme.breakpoints.down('sm')]: {
+      width: 300,
+    },
   },
   accordionHeading: {
     float: 'left',
@@ -129,6 +172,9 @@ export const useStyles = makeStyles((theme) => ({
   accordionSection: {
     maxWidth: 360,
     marginTop: 50,
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 300,
+    },
   },
   accordionLine: {
     color: '#FFF',
@@ -154,11 +200,9 @@ export const useStyles = makeStyles((theme) => ({
   },
   secondGrid: {
     marginTop: 110,
-  },
-  headIcon: {
-    width: 25,
-    height: 30,
-    objectFit: 'cover',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 20,
+    },
   },
   colorTab: {
     borderRadius: '100%',

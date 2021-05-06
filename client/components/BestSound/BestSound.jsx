@@ -27,12 +27,12 @@ export default function BestSound(props) {
     <main>
       <Box className={classes.mainSection}>
         <Grid container spacing={0} className={classes.mainGridCont}>
-          <Grid item className={classes.gridItems} xs={6}>
+          <Grid item className={classes.gridItems}>
             <Container className={classes.gridTextFirst}>
-              <img src="https://static.wixstatic.com/media/82fcd3_7b50ff02a3dd411fac2e6ced36f2aed0~mv2.png/v1/fill/w_488,h_267,al_c,q_85,usm_0.66_1.00_0.01/Model_Strip_Single.webp" />
+              <img src="https://static.wixstatic.com/media/82fcd3_7b50ff02a3dd411fac2e6ced36f2aed0~mv2.png/v1/fill/w_488,h_267,al_c,q_85,usm_0.66_1.00_0.01/Model_Strip_Single.webp" className={classes.image}/>
             </Container>
           </Grid>
-          <Grid item className={classes.gridItems} xs={6}>
+          <Grid item className={classes.gridItems}>
             <Container className={classes.gridTexSecond}>
               <Typography
                 variant="h3"
