@@ -239,6 +239,7 @@ export const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top: 30,
     left: 40,
+    cursor: 'pointer',
   },
   totalPrice: {
     font: 'var(--fnt,var(--font_5))',

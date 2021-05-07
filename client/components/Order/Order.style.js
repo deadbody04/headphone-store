@@ -46,6 +46,7 @@ export const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top: 30,
     left: 40,
+    cursor: 'pointer',
   },
   headerSection: {
     background: '#2D2D2D',

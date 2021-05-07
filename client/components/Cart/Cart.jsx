@@ -50,7 +50,7 @@ export default function Cart(props) {
 
   return (
     <main className={classes.fullPage}>
-      <Button className={classes.close} onClick={handleClose} />
+      <Link className={classes.close} onClick={handleClose} />
       <Header />
       <Box className={classes.mainBlock}>
         <Grid container item className={classes.mainContainer}>

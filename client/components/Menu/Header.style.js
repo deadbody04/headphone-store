@@ -138,5 +138,9 @@ export const useStyles = makeStyles((theme) => ({
     top: 60,
     right: 60,
     background: 'none',
+    [theme.breakpoints.down('sm')]: {
+      top: 10,
+      right: 10,
+    },
   },
 }))

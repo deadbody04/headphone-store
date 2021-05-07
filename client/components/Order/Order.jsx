@@ -135,7 +135,7 @@ export default function Order(props) {
 
   return (
     <main>
-      <Button className={classes.close} onClick={handleClosePage} />
+      <Link className={classes.close} onClick={handleClosePage} />
       <div className={classes.headerSection}>
         <Header openButton={openButton} />
         <Grid item container className={classes.mainSection}>

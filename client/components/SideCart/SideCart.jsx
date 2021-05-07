@@ -37,14 +37,6 @@ export default function SideCart(props) {
     setOpen(true)
   }
 
-  const handleClose = () => {
-    setOpen(false)
-  }
-
-  const handleOpenCart = () => {
-    setForm(5)
-  }
-
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === 'keydown' &&
@@ -128,8 +120,7 @@ export default function SideCart(props) {
               product={product}
               carts={carts}
             >
-              {' '}
-              View Cart{' '}
+              View Cart
             </Button>
           </>
         )}
