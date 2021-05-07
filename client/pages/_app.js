@@ -4,7 +4,7 @@ import { ApolloProvider } from '@apollo/client'
 import AppController from '../store/controllers/AppController'
 
 import withApollo from '../graphql/apolloClient'
-import GlobalState from '../store/providers/globalState'
+import GlobalState from '../store/providers/GlobalState'
 import '../styles/globals.css'
 
 const MyApp = ({ Component, pageProps, apollo }) => {

@@ -21,29 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/AsFeaturedOn/AsFeaturedOn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/AsFeaturedOn/AsFeaturedOn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/AsFeaturedOn/AsFeaturedOn.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/AsFeaturedOn/AsFeaturedOn.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/AsFeaturedOn/first.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/BestSound/BestSound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/BestSound/BestSound.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/BestSound/BestSound.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/BestSound/BestSound.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Cart/Cart.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Cart/Cart.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Cart/CartItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/npm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Content/Content.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Content/Content.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/EmailDistribution/EmailDistribution.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/EmailDistribution/EmailDistribution.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/HomePage/HomePage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/HomePage/HomePage.style.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/HomePage/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/MainContent/MainContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MainContent/MainContent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/MainContent/MainContent.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MainContent/MainContent.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Menu/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Menu/Header.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/Header.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Order/Order.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Order/Order.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Order/Order.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Order/Order.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Reviews/Reviews.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Reviews/Reviews.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Reviews/Reviews.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/SideCart/SideCart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SideCart/SideCart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,17 +66,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\headphone-store\client\components\MainContent" />
-      <recent name="C:\headphone-store\client\components\HomePage" />
-      <recent name="C:\headphone-store\client\components\Order" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\headphone-store\client\components\Auth" />
       <recent name="C:\headphone-store\client\components\AuthStyles" />
       <recent name="C:\headphone-store\client\store\controllers" />
       <recent name="C:\headphone-store\client\store\providers" />
       <recent name="C:\headphone-store\client\store" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\headphone-store\client\components\MainContent" />
+      <recent name="C:\headphone-store\client\components\HomePage" />
+      <recent name="C:\headphone-store\client\components\Order" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -211,7 +189,8 @@
       <workItem from="1620270233038" duration="4681000" />
       <workItem from="1620293285985" duration="3764000" />
       <workItem from="1620301358763" duration="12836000" />
-      <workItem from="1620318550152" duration="1979000" />
+      <workItem from="1620318550152" duration="2367000" />
+      <workItem from="1620353878283" duration="112000" />
     </task>
     <servers />
   </component>
