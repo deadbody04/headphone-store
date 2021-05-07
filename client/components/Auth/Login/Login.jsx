@@ -1,7 +1,7 @@
 import { Typography, Grid, Button, Link, IconButton } from '@material-ui/core'
 import React from 'react'
 import { useStyles } from '../AuthStyles/Sigin.Login.style'
-import { Close } from '@material-ui/icons'
+import GoogleIcon from '../../GoogleIcon/GoogleIcon'
 
 export default function Login({ setForm }) {
   const classes = useStyles()
@@ -37,15 +37,30 @@ export default function Login({ setForm }) {
           </Grid>
           <Grid item className={classes.heading}>
             <Typography variant="h2">
-              <Button variant="contained" className={classes.logButton}>
-                Default
+              <Button
+                variant="contained"
+                className={classes.logButton}
+                style={{
+                  background: '#4285F4',
+                  border: 'none',
+                }}
+                startIcon={<GoogleIcon />}
+              >
+                Log in with Google
               </Button>
             </Typography>
           </Grid>
           <Grid item className={classes.heading}>
             <Typography variant="h2">
-              <Button variant="contained" className={classes.logButton}>
-                Default
+              <Button
+                variant="contained"
+                className={classes.logButton}
+                style={{
+                  background: '#3A558E',
+                  border: 'none',
+                }}
+              >
+                Log in with VKontakte
               </Button>
             </Typography>
           </Grid>

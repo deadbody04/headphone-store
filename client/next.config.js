@@ -1,4 +1,3 @@
-// const withTM = require('next-transpile-modules')(['dotenv'.config()])
 require('dotenv').config()
 
 module.exports = {
@@ -16,3 +15,4 @@ module.exports = {
     return config
   },
 }
+

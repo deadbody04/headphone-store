@@ -596,7 +596,6 @@ export default function Header({
                 </Link>
               </>
             )}
-
             {['right'].map((anchor) => (
               <React.Fragment key={anchor}>
                 <Link

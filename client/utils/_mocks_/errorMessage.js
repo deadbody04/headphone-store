@@ -1,20 +1,21 @@
-import { GraphQLError } from "graphql";
+import { GraphQLError } from 'graphql'
 
 export const errorMessage = ({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
     return graphQLErrors.map((err) => {
-      const message = err?.extensions?.exception?.data?.message[0]?.messages[0]?.message
+      const message =
+        err?.extensions?.exception?.data?.message[0]?.messages[0]?.message
       switch (message) {
-        case 'Username already taken' : {
+        case 'Username already taken': {
           return 'This login is already taken'
         }
-        case 'Email already taken' : {
+        case 'Email already taken': {
           return 'This email is already taken'
         }
-        case 'Identifier or password invalid' : {
+        case 'Identifier or password invalid': {
           return 'Username or email invalid'
         }
-        case 'Your account email is not confirmed' : {
+        case 'Your account email is not confirmed': {
           return 'Your account email is not confirmed'
         }
         default: {

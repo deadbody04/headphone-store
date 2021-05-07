@@ -18,7 +18,6 @@ import React, { useState } from 'react'
 import { useStyles, AntTab, AccordionCustom } from './Order.style'
 import PropTypes from 'prop-types'
 import { Add } from '@material-ui/icons'
-import CircularProgress from '@material-ui/core/CircularProgress'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -50,8 +49,6 @@ function a11yProps(index) {
 
 export default function Order(props) {
   const classes = useStyles()
-  //
-  // let spinnerInput = React.createRef()
 
   const [openButton, setOpenButton] = useState(1)
   const [value, setValue] = useState(0)

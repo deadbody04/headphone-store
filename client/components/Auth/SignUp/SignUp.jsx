@@ -37,15 +37,29 @@ export default function SignUp({ setForm }) {
           </Grid>
           <Grid item className={classes.heading}>
             <Typography variant="h2">
-              <Button variant="contained" className={classes.logButton}>
-                Default
+              <Button
+                variant="contained"
+                className={classes.logButton}
+                style={{
+                  background: '#4285F4',
+                  border: 'none',
+                }}
+              >
+                Log in with Google
               </Button>
             </Typography>
           </Grid>
           <Grid item className={classes.heading}>
             <Typography variant="h2">
-              <Button variant="contained" className={classes.logButton}>
-                Default
+              <Button
+                variant="contained"
+                className={classes.logButton}
+                style={{
+                  background: '#3A558E',
+                  border: 'none',
+                }}
+              >
+                Log in with VKontakte
               </Button>
             </Typography>
           </Grid>

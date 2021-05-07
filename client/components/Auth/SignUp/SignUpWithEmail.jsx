@@ -7,13 +7,13 @@ import {
   InputLabel,
   FormControl,
   Input,
-  TextField,
+  IconButton,
 } from '@material-ui/core'
 
 import { useMutation } from '@apollo/client'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
-import { Facebook, GTranslate } from '@material-ui/icons'
+import { Close, Facebook, GTranslate } from '@material-ui/icons'
 
 import { registerUser } from '../../../utils/_mocks_/auth'
 import { AppContext } from '../../../store/providers/AppProvider'
@@ -21,11 +21,22 @@ import REGISTER_USER from '../../../graphql/mutations/RegisterUser'
 import { errorMessage } from '../../../utils/_mocks_/errorMessage'
 
 import { useStyles } from '../AuthStyles/Auth.style'
+import Snackbar from '@material-ui/core/Snackbar'
 
 export default function LoginUpWithEmail({ setForm }) {
   const classes = useStyles()
+
   const { state, dispatch } = useContext(AppContext)
   const [register] = useMutation(REGISTER_USER)
+  const [open, setOpen] = React.useState(false)
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return
+    }
+
+    setOpen(false)
+  }
 
   const initialValues = {
     username: '',
@@ -57,12 +68,90 @@ export default function LoginUpWithEmail({ setForm }) {
     try {
       const data = await registerUser(dispatch, register, values)
       if (data.user) {
-        setForm(1)
+        return (
+          <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            open={open}
+            autoHideDuration={6000}
+            onClose={handleClose}
+            message="Note archived"
+            action={
+              <React.Fragment>
+                <Button color="secondary" size="small" onClick={handleClose}>
+                  UNDO
+                </Button>
+                <IconButton
+                  size="small"
+                  aria-label="close"
+                  color="inherit"
+                  onClick={handleClose}
+                >
+                  <Close fontSize="small" />
+                </IconButton>
+              </React.Fragment>
+            }
+          />
+        )
       } else {
-        console.log('error')
+        return (
+          <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            open={open}
+            autoHideDuration={6000}
+            onClose={handleClose}
+            message="Note archived"
+            action={
+              <React.Fragment>
+                <Button color="secondary" size="small" onClick={handleClose}>
+                  Successful registration
+                </Button>
+                <IconButton
+                  size="small"
+                  aria-label="close"
+                  color="inherit"
+                  onClick={handleClose}
+                >
+                  <Close fontSize="small" />
+                </IconButton>
+              </React.Fragment>
+            }
+          />
+        )
       }
     } catch (error) {
-      console.log(error)
+      return (
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+          open={open}
+          autoHideDuration={6000}
+          onClose={handleClose}
+          message="Note archived"
+          action={
+            <React.Fragment>
+              <Button color="secondary" size="small" onClick={handleClose}>
+                UNDO
+              </Button>
+              <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={handleClose}
+              >
+                <Close fontSize="small" />
+              </IconButton>
+            </React.Fragment>
+          }
+        />
+      )
     }
   }, [])
 

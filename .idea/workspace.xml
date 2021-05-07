@@ -20,13 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/components/GoogleIcon/GoogleIcon.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/GoogleIcon/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/icons/google-icon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/AuthLayout/AuthLayout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/AuthLayout/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUpWithEmail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUpWithEmail.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Cart/Cart.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Cart/Cart.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Menu/Header.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/Header.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Menu/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Order/Order.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Order/Order.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Order/Order.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Order/Order.style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/SideCart/SideCart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SideCart/SideCart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/WaveIcon/WaveIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/WaveIcon/WaveIcon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/graphql/apolloClient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/graphql/apolloClient.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/reducers/reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/reducers/reducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/styles/Home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/utils/_mocks_/errorMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/_mocks_/errorMessage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,17 +81,17 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\headphone-store\client\public" />
       <recent name="C:\headphone-store\client\components\Auth" />
       <recent name="C:\headphone-store\client\components\AuthStyles" />
       <recent name="C:\headphone-store\client\store\controllers" />
       <recent name="C:\headphone-store\client\store\providers" />
-      <recent name="C:\headphone-store\client\store" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\headphone-store\client\components\MainContent" />
@@ -196,7 +211,10 @@
       <workItem from="1620301358763" duration="12836000" />
       <workItem from="1620318550152" duration="2367000" />
       <workItem from="1620353878283" duration="1149000" />
-      <workItem from="1620355171228" duration="53000" />
+      <workItem from="1620355171228" duration="649000" />
+      <workItem from="1620366027876" duration="1383000" />
+      <workItem from="1620370132363" duration="5379000" />
+      <workItem from="1620377560785" duration="2676000" />
     </task>
     <servers />
   </component>
@@ -255,10 +273,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="807" y="222" key="RollbackChangesDialog/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619680049528" />
-    <state x="720" y="127" width="1200" height="708" key="SettingsEditor" timestamp="1619677550641">
+    <state x="720" y="127" width="1200" height="708" key="SettingsEditor" timestamp="1620372304626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="720" y="127" width="1200" height="708" key="SettingsEditor/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1619677550641" />
+    <state x="720" y="127" width="1200" height="708" key="SettingsEditor/-1280.113.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1620372304626" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1620224369491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

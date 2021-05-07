@@ -5,7 +5,7 @@ import AppController from '../store/controllers/AppController'
 
 import withApollo from '../graphql/apolloClient'
 import GlobalState from '../store/providers/GlobalState'
-import '../styles/globals.css'
+import '../public/styles/globals.css'
 
 const MyApp = ({ Component, pageProps, apollo }) => {
   useEffect(() => {

@@ -44,9 +44,6 @@ export default function Cart(props) {
   )
 
   const matches = useMediaQuery(theme.breakpoints.up('sm'))
-  const matchesLow = useMediaQuery(theme.breakpoints.up('xs'))
-  const matchesHight = useMediaQuery(theme.breakpoints.up('xl'))
-  const matchesMid = useMediaQuery(theme.breakpoints.up('lg'))
 
   return (
     <main className={classes.fullPage}>

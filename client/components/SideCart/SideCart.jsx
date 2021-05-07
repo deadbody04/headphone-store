@@ -22,7 +22,6 @@ export default function SideCart(props) {
     removeProductFromCart,
     removeQuantity,
     addQuantity,
-    setForm,
     product,
   } = props
   const itemsPrice = carts.reduce(
