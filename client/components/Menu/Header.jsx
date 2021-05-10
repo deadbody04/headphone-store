@@ -21,6 +21,7 @@ import {
   Close,
 } from '@material-ui/icons'
 
+import { useRouter } from 'next/router'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { useTheme } from '@material-ui/core/styles'
 
@@ -36,6 +37,7 @@ import Context from '../../store/controllers/Context'
 
 import { Link } from 'react-scroll'
 import classNames from 'classnames'
+import Cookies from 'js-cookie'
 
 export default function Header({
   addProductToCart,
@@ -48,6 +50,7 @@ export default function Header({
 }) {
   const classes = useStyles()
   const theme = useTheme()
+  const router = useRouter()
 
   const [open, setOpen] = useState(false)
   const [form, setForm] = useState(0)
@@ -81,6 +84,14 @@ export default function Header({
   const openSignPage = () => {
     setForm(0)
   }
+  const logOut = () => {
+    Cookies.remove('token')
+    router.push('/')
+  }
+  const homePage = () => {
+    router.push('/')
+  }
+
   const matches = useMediaQuery(theme.breakpoints.up('sm'))
   const matchesLow = useMediaQuery(theme.breakpoints.up('xs'))
   const matchesHight = useMediaQuery(theme.breakpoints.up('xl'))
@@ -94,6 +105,7 @@ export default function Header({
           color="inherit"
           className={classes.menuLink}
           underline="none"
+          onClick={homePage}
         >
           <Headset className={classes.headIcon} />
           Soundbeam
@@ -178,19 +190,34 @@ export default function Header({
                     className={classNames(classes.linkIcons, classes.logInIcon)}
                   />
                 </Link>
-                <Link
-                  href="#"
-                  variant="body2"
-                  color="inherit"
-                  className={classNames(classes.menuButtons, classes.logText)}
-                  underline="none"
-                  onClick={() => {
-                    handleClickOpen()
-                    openSignPage()
-                  }}
-                >
-                  Log in
-                </Link>
+                {Cookies.get('token') === undefined ? (
+                  <Link
+                    href="#"
+                    variant="body2"
+                    color="inherit"
+                    className={classNames(classes.menuButtons, classes.logText)}
+                    underline="none"
+                    onClick={() => {
+                      handleClickOpen()
+                      openSignPage()
+                    }}
+                  >
+                    Log in
+                  </Link>
+                ) : (
+                  <Link
+                    href="#"
+                    variant="body2"
+                    color="inherit"
+                    className={classNames(classes.menuButtons, classes.logText)}
+                    underline="none"
+                    onClick={() => {
+                      logOut()
+                    }}
+                  >
+                    Logout
+                  </Link>
+                )}
                 {openButton ? (
                   <Button
                     className={classNames(
@@ -248,7 +275,7 @@ export default function Header({
                         >
                           <Close />
                         </IconButton>
-                        <SignUpWithEmail setForm={setForm} />
+                        <SignUpWithEmail setForm={setForm} setOpen={setOpen} />
                       </>
                     ) : form === 3 ? (
                       <>
@@ -378,7 +405,7 @@ export default function Header({
                         >
                           <Close />
                         </IconButton>
-                        <SignUp setForm={setForm} />
+                        <SignUp setForm={setForm} setOpen={setOpen} />
                       </>
                     ) : form === 1 ? (
                       <>
@@ -388,7 +415,7 @@ export default function Header({
                         >
                           <Close />
                         </IconButton>
-                        <Login setForm={setForm} />
+                        <Login setForm={setForm} setOpen={setOpen} />
                       </>
                     ) : form === 2 ? (
                       <>
@@ -398,7 +425,11 @@ export default function Header({
                         >
                           <Close />
                         </IconButton>
-                        <SignUpWithEmail setForm={setForm} />
+                        <SignUpWithEmail
+                          setForm={setForm}
+                          setOpen={setOpen}
+                          handleClose={handleClose}
+                        />
                       </>
                     ) : form === 3 ? (
                       <>
@@ -408,7 +439,7 @@ export default function Header({
                         >
                           <Close />
                         </IconButton>
-                        <LoginWithEmail setForm={setForm} />
+                        <LoginWithEmail setForm={setForm} setOpen={setOpen} />
                       </>
                     ) : form === 4 ? (
                       <Order
@@ -416,7 +447,6 @@ export default function Header({
                         setForm={setForm}
                         setOpen={setOpen}
                         addProductToCart={context.addProductToCart}
-                        handleClose={handleClose}
                       />
                     ) : form === 5 ? (
                       <>
@@ -467,6 +497,7 @@ export default function Header({
                 >
                   Log in
                 </Link>
+
                 {openButton ? (
                   <Button
                     className={classNames(
@@ -524,7 +555,7 @@ export default function Header({
                         >
                           <Close />
                         </IconButton>
-                        <SignUpWithEmail setForm={setForm} />
+                        <SignUpWithEmail setForm={setForm} setOpen={setOpen} />
                       </>
                     ) : form === 3 ? (
                       <>
@@ -534,7 +565,7 @@ export default function Header({
                         >
                           <Close />
                         </IconButton>
-                        <LoginWithEmail setForm={setForm} />
+                        <LoginWithEmail setForm={setForm} setOpen={setOpen} />
                       </>
                     ) : form === 4 ? (
                       <Order

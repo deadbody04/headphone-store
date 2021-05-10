@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react'
+import React, { useCallback, useContext } from 'react'
 import {
   Typography,
   Grid,
@@ -7,13 +7,15 @@ import {
   InputLabel,
   FormControl,
   Input,
-  IconButton,
+  Snackbar,
 } from '@material-ui/core'
+import MuiAlert from '@material-ui/lab/Alert'
 
+import { useRouter } from 'next/router'
 import { useMutation } from '@apollo/client'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
-import { Close, Facebook, GTranslate } from '@material-ui/icons'
+import { Facebook, GTranslate } from '@material-ui/icons'
 
 import { registerUser } from '../../../utils/_mocks_/auth'
 import { AppContext } from '../../../store/providers/AppProvider'
@@ -21,21 +23,39 @@ import REGISTER_USER from '../../../graphql/mutations/RegisterUser'
 import { errorMessage } from '../../../utils/_mocks_/errorMessage'
 
 import { useStyles } from '../AuthStyles/Auth.style'
-import Snackbar from '@material-ui/core/Snackbar'
 
-export default function LoginUpWithEmail({ setForm }) {
+export default function SignUpWithEmail({ ...props }) {
   const classes = useStyles()
+  const router = useRouter()
 
   const { state, dispatch } = useContext(AppContext)
   const [register] = useMutation(REGISTER_USER)
-  const [open, setOpen] = React.useState(false)
+  const { setForm, setOpen } = props
+  const [openSnack, setOpenSnack] = React.useState(false)
 
-  const handleClose = (event, reason) => {
+  const homePage = () => {
+    router.push('/')
+  }
+  const handleClose = () => {
+    setOpen(false)
+  }
+  const handleClickChangeState = () => {
+    setForm(1)
+  }
+  const handleClick = () => {
+    setOpenSnack(true)
+  }
+
+  const handleCloseSnack = (event, reason) => {
     if (reason === 'clickaway') {
       return
     }
 
-    setOpen(false)
+    setOpenSnack(false)
+  }
+
+  function Alert(props) {
+    return <MuiAlert variant="filled" {...props} />
   }
 
   const initialValues = {
@@ -61,98 +81,16 @@ export default function LoginUpWithEmail({ setForm }) {
       .required('Confirm password'),
   })
 
-  const handleClickChangeState = () => {
-    setForm(1)
-  }
   const handleSubmit = useCallback(async (values) => {
     try {
       const data = await registerUser(dispatch, register, values)
       if (data.user) {
-        return (
-          <Snackbar
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-            open={open}
-            autoHideDuration={6000}
-            onClose={handleClose}
-            message="Note archived"
-            action={
-              <React.Fragment>
-                <Button color="secondary" size="small" onClick={handleClose}>
-                  UNDO
-                </Button>
-                <IconButton
-                  size="small"
-                  aria-label="close"
-                  color="inherit"
-                  onClick={handleClose}
-                >
-                  <Close fontSize="small" />
-                </IconButton>
-              </React.Fragment>
-            }
-          />
-        )
+        homePage()
+        handleClose()
       } else {
-        return (
-          <Snackbar
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-            open={open}
-            autoHideDuration={6000}
-            onClose={handleClose}
-            message="Note archived"
-            action={
-              <React.Fragment>
-                <Button color="secondary" size="small" onClick={handleClose}>
-                  Successful registration
-                </Button>
-                <IconButton
-                  size="small"
-                  aria-label="close"
-                  color="inherit"
-                  onClick={handleClose}
-                >
-                  <Close fontSize="small" />
-                </IconButton>
-              </React.Fragment>
-            }
-          />
-        )
+        handleClick()
       }
-    } catch (error) {
-      return (
-        <Snackbar
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-          open={open}
-          autoHideDuration={6000}
-          onClose={handleClose}
-          message="Note archived"
-          action={
-            <React.Fragment>
-              <Button color="secondary" size="small" onClick={handleClose}>
-                UNDO
-              </Button>
-              <IconButton
-                size="small"
-                aria-label="close"
-                color="inherit"
-                onClick={handleClose}
-              >
-                <Close fontSize="small" />
-              </IconButton>
-            </React.Fragment>
-          }
-        />
-      )
-    }
+    } catch (error) {handleClick()}
   }, [])
 
   const formik = useFormik({
@@ -366,6 +304,15 @@ export default function LoginUpWithEmail({ setForm }) {
                   >
                     Sign Up
                   </Button>
+                  <Snackbar
+                    open={openSnack}
+                    autoHideDuration={10000}
+                    onClose={handleCloseSnack}
+                  >
+                    <Alert onClose={handleCloseSnack} severity="error">
+                      Email or username already taken
+                    </Alert>
+                  </Snackbar>
                 </Typography>
               </Grid>
             </form>

@@ -6,9 +6,10 @@ export const requestAuth = () => {
   }
 }
 
-export const authSuccess = () => {
+export const authSuccess = (value) => {
   return {
     type: ACTION_TYPES.AUTH_SUCCESS,
+    payload: value,
   }
 }
 

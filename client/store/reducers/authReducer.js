@@ -24,7 +24,7 @@ export const authReducer = (state, action) => {
         isAuthenticated: true,
         loading: true,
         user: action.payload.user,
-        token: action.payload.token || state.token || Cookies('token'),
+        token: action.payload.jwt || state.token || Cookies.set('token'),
       }
     }
     case ACTION_TYPES.AUTH_ERROR: {

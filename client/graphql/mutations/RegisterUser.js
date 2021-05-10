@@ -8,6 +8,7 @@ const REGISTER_USER = gql`
         username
         email
       }
+      jwt
     }
   }
 `

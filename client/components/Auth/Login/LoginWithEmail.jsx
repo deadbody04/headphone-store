@@ -22,114 +22,54 @@ import { AppContext } from '../../../store/providers/AppProvider'
 import Snackbar from '@material-ui/core/Snackbar'
 import { errorMessage } from '../../../utils/_mocks_/errorMessage'
 import LOGIN_USER from '../../../graphql/mutations/LoginUser'
+import { useRouter } from 'next/router'
+import MuiAlert from '@material-ui/lab/Alert'
 
-export default function LoginUpWithEmail({ setForm }) {
+export default function LoginUpWithEmail({ ...props }) {
   const classes = useStyles()
+  const router = useRouter()
 
+  const { state, dispatch } = useContext(AppContext)
+  const [login] = useMutation(LOGIN_USER)
+  const [openSnack, setOpenSnack] = React.useState(false)
+  const { setOpen, setForm } = props
+
+  const homePage = () => {
+    router.push('/')
+  }
+  const handleClose = () => {
+    setOpen(false)
+  }
   const handleClickChangeState = () => {
     setForm(0)
   }
+  const handleClick = () => {
+    setOpenSnack(true)
+  }
 
-  const [open, setOpen] = React.useState(false)
-  const { state, dispatch } = useContext(AppContext)
-  const [login] = useMutation(LOGIN_USER)
-
-  const handleClose = (event, reason) => {
+  const handleCloseSnack = (event, reason) => {
     if (reason === 'clickaway') {
       return
     }
 
-    setOpen(false)
+    setOpenSnack(false)
+  }
+
+  function Alert(props) {
+    return <MuiAlert variant="filled" {...props} />
   }
 
   const handleSubmit = useCallback(async (values) => {
     try {
       const data = await loginUser(dispatch, login, values)
-      if (!data.user) {
-        return (
-          <Snackbar
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-            open={open}
-            autoHideDuration={6000}
-            onClose={handleClose}
-            message="Note archived"
-            action={
-              <React.Fragment>
-                <Button color="secondary" size="small" onClick={handleClose}>
-                  UNDO
-                </Button>
-                <IconButton
-                  size="small"
-                  aria-label="close"
-                  color="inherit"
-                  onClick={handleClose}
-                >
-                  <Close fontSize="small" />
-                </IconButton>
-              </React.Fragment>
-            }
-          />
-        )
+      if (data.user) {
+        homePage()
+        handleClose()
       } else {
-        return (
-          <Snackbar
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-            open={open}
-            autoHideDuration={6000}
-            onClose={handleClose}
-            message="Note archived"
-            action={
-              <React.Fragment>
-                <Button color="secondary" size="small" onClick={handleClose}>
-                  Successful registration
-                </Button>
-                <IconButton
-                  size="small"
-                  aria-label="close"
-                  color="inherit"
-                  onClick={handleClose}
-                >
-                  <Close fontSize="small" />
-                </IconButton>
-              </React.Fragment>
-            }
-          />
-        )
+        handleClick()
       }
     } catch (error) {
-      return (
-        <Snackbar
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-          open={open}
-          autoHideDuration={6000}
-          onClose={handleClose}
-          message="Note archived"
-          action={
-            <React.Fragment>
-              <Button color="secondary" size="small" onClick={handleClose}>
-                UNDO
-              </Button>
-              <IconButton
-                size="small"
-                aria-label="close"
-                color="inherit"
-                onClick={handleClose}
-              >
-                <Close fontSize="small" />
-              </IconButton>
-            </React.Fragment>
-          }
-        />
-      )
+      handleClick()
     }
   }, [])
 
@@ -276,6 +216,15 @@ export default function LoginUpWithEmail({ setForm }) {
                     >
                       Log in
                     </Button>
+                    <Snackbar
+                      open={openSnack}
+                      autoHideDuration={10000}
+                      onClose={handleCloseSnack}
+                    >
+                      <Alert onClose={handleCloseSnack} severity="error">
+                        Wrong login or password
+                      </Alert>
+                    </Snackbar>
                   </Typography>
                 </div>
               </Grid>

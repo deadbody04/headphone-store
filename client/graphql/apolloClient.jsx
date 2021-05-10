@@ -27,7 +27,7 @@ export default withApollo(({ initialState }) => {
     link: from([
       authMiddleware,
       createHttpLink({
-        uri: `${process.env.STRAPI_API_URL}/graphql`,
+        uri: `http://localhost:1337/graphql`,
         credentials: `same-origin`,
         fetch,
       }),

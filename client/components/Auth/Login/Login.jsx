@@ -1,7 +1,6 @@
 import { Typography, Grid, Button, Link, IconButton } from '@material-ui/core'
 import React from 'react'
 import { useStyles } from '../AuthStyles/Sigin.Login.style'
-import GoogleIcon from '../../GoogleIcon/GoogleIcon'
 
 export default function Login({ setForm }) {
   const classes = useStyles()
@@ -42,9 +41,9 @@ export default function Login({ setForm }) {
                 className={classes.logButton}
                 style={{
                   background: '#4285F4',
-                  border: 'none',
+                  border: 'solid 1px #4285F4',
                 }}
-                startIcon={<GoogleIcon />}
+                href={`&{process.env.STRAPI_API_URL}/connect/&{google}`}
               >
                 Log in with Google
               </Button>
@@ -57,8 +56,9 @@ export default function Login({ setForm }) {
                 className={classes.logButton}
                 style={{
                   background: '#3A558E',
-                  border: 'none',
+                  border: 'solid 1px #3A558E',
                 }}
+                href={`&{process.env.STRAPI_API_URL}/connect/&{vk}`}
               >
                 Log in with VKontakte
               </Button>

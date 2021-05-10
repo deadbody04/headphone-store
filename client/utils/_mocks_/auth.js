@@ -15,10 +15,11 @@ export const registerUser = async (dispatch, register, payload) => {
     })
     if (data.register?.user) {
       dispatch(ACTIONS.authSuccess(data.register))
+      Cookies.set('token', data.register.jwt)
       return data.register
     }
     dispatch(ACTIONS.authError())
-    return data.errors[o]
+    return data.errors[0]
   } catch (error) {
     dispatch(ACTIONS.authError())
     return error
@@ -27,6 +28,7 @@ export const registerUser = async (dispatch, register, payload) => {
 
 export const loginUser = async (dispatch, login, payload) => {
   try {
+    console.log(data)
     dispatch(ACTIONS.requestAuth())
     const { data } = await login({
       variables: {
@@ -35,10 +37,11 @@ export const loginUser = async (dispatch, login, payload) => {
     })
     if (data.login?.user) {
       dispatch(ACTIONS.authSuccess(data.login))
+      Cookies.set('token', data.login.jwt)
       return data.login
     }
     dispatch(ACTIONS.authError())
-    return data.errors[o]
+    return data.errors[0]
   } catch (error) {
     dispatch(ACTIONS.authError())
     return error

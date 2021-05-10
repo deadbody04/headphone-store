@@ -42,10 +42,11 @@ export default function SignUp({ setForm }) {
                 className={classes.logButton}
                 style={{
                   background: '#4285F4',
-                  border: 'none',
+                  border: 'solid 1px #4285F4',
                 }}
+                href={`&{process.env.STRAPI_API_URL}/connect/&{google}`}
               >
-                Log in with Google
+                Sign up with Google
               </Button>
             </Typography>
           </Grid>
@@ -56,10 +57,11 @@ export default function SignUp({ setForm }) {
                 className={classes.logButton}
                 style={{
                   background: '#3A558E',
-                  border: 'none',
+                  border: 'solid 1px #3A558E',
                 }}
+                href={`&{process.env.STRAPI_API_URL}/connect/&{vk}`}
               >
-                Log in with VKontakte
+                Sign up with VKontakte
               </Button>
             </Typography>
           </Grid>
