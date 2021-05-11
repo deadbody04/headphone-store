@@ -27,7 +27,7 @@ export default function LoginUpWithEmail({ ...props }) {
   const classes = useStyles()
   const router = useRouter()
 
-  const { state, dispatch } = useContext(AppContext)
+  const { dispatch } = useContext(AppContext)
   const [login] = useMutation(LOGIN_USER)
   const [openSnack, setOpenSnack] = React.useState(false)
   const { setOpen, setForm } = props

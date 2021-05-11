@@ -27,7 +27,7 @@ export default function SignUpWithEmail({ ...props }) {
   const classes = useStyles()
   const router = useRouter()
 
-  const { state, dispatch } = useContext(AppContext)
+  const { dispatch } = useContext(AppContext)
   const [register] = useMutation(REGISTER_USER)
   const { setForm, setOpen } = props
   const [openSnack, setOpenSnack] = React.useState(false)
