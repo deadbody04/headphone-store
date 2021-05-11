@@ -28,7 +28,6 @@ export const registerUser = async (dispatch, register, payload) => {
 
 export const loginUser = async (dispatch, login, payload) => {
   try {
-    console.log(data)
     dispatch(ACTIONS.requestAuth())
     const { data } = await login({
       variables: {

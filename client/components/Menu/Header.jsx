@@ -33,6 +33,8 @@ import LoginWithEmail from '../Auth/Login/LoginWithEmail'
 import SideCart from '../SideCart/SideCart'
 import Cart from '../Cart'
 
+import { logoutUser } from '../../utils/_mocks_/auth'
+import { AppContext } from '../../store/providers/AppProvider'
 import Context from '../../store/controllers/Context'
 
 import { Link } from 'react-scroll'
@@ -52,6 +54,7 @@ export default function Header({
   const theme = useTheme()
   const router = useRouter()
 
+  const { stateDispatch, dispatch } = useContext(AppContext)
   const [open, setOpen] = useState(false)
   const [form, setForm] = useState(0)
   const [state, setState] = useState({
@@ -84,10 +87,15 @@ export default function Header({
   const openSignPage = () => {
     setForm(0)
   }
-  const logOut = () => {
-    Cookies.remove('token')
-    router.push('/')
+  const logout = async () => {
+    try {
+      await logoutUser(dispatch)
+      router.push('/')
+    } catch (error) {
+      console.log('asda')
+    }
   }
+
   const homePage = () => {
     router.push('/')
   }
@@ -211,9 +219,7 @@ export default function Header({
                     color="inherit"
                     className={classNames(classes.menuButtons, classes.logText)}
                     underline="none"
-                    onClick={() => {
-                      logOut()
-                    }}
+                    onClick={async () => logout()}
                   >
                     Logout
                   </Link>

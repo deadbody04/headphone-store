@@ -20,7 +20,6 @@ import { Facebook, GTranslate } from '@material-ui/icons'
 import { registerUser } from '../../../utils/_mocks_/auth'
 import { AppContext } from '../../../store/providers/AppProvider'
 import REGISTER_USER from '../../../graphql/mutations/RegisterUser'
-import { errorMessage } from '../../../utils/_mocks_/errorMessage'
 
 import { useStyles } from '../AuthStyles/Auth.style'
 
@@ -90,7 +89,9 @@ export default function SignUpWithEmail({ ...props }) {
       } else {
         handleClick()
       }
-    } catch (error) {handleClick()}
+    } catch (error) {
+      handleClick()
+    }
   }, [])
 
   const formik = useFormik({

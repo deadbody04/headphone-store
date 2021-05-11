@@ -2,12 +2,40 @@
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
-    "name": "Product"
+    "name": "Products",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
     "draftAndPublish": true
   },
-  "attributes": {}
+  "attributes": {
+    "model": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "description": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "SKU": {
+      "type": "biginteger"
+    }
+  }
 }

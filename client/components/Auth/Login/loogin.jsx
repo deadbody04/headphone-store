@@ -47,10 +47,11 @@ const Loogin: FunctionComponent = () => {
                     variant: 'error',
                 })
             } else {
-              router.push('/')
+                enqueueSnackbar('Успешный вход', {variant: 'success'})
+                router.push('/my-account')
             }
         } catch (error) {
-
+            enqueueSnackbar(errorMessage(error), {variant: 'error'})
         }
     }, [])
 

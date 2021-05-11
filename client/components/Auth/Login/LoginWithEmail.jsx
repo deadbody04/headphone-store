@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react'
+import React, { useCallback, useContext } from 'react'
 import {
   Typography,
   Grid,
@@ -7,11 +7,10 @@ import {
   InputLabel,
   FormControl,
   Input,
-  IconButton,
 } from '@material-ui/core'
 
 import { useStyles } from '../AuthStyles/Auth.style'
-import { Facebook, GTranslate, Close } from '@material-ui/icons'
+import { Facebook, GTranslate } from '@material-ui/icons'
 
 import { useMutation } from '@apollo/client'
 import * as yup from 'yup'
@@ -20,7 +19,6 @@ import { useFormik } from 'formik'
 import { loginUser } from '../../../utils/_mocks_/auth'
 import { AppContext } from '../../../store/providers/AppProvider'
 import Snackbar from '@material-ui/core/Snackbar'
-import { errorMessage } from '../../../utils/_mocks_/errorMessage'
 import LOGIN_USER from '../../../graphql/mutations/LoginUser'
 import { useRouter } from 'next/router'
 import MuiAlert from '@material-ui/lab/Alert'
@@ -63,13 +61,13 @@ export default function LoginUpWithEmail({ ...props }) {
     try {
       const data = await loginUser(dispatch, login, values)
       if (data.user) {
-        homePage()
-        handleClose()
+        // homePage()
+        // handleClose()
       } else {
-        handleClick()
+        // handleClick()
       }
     } catch (error) {
-      handleClick()
+      // handleClick()
     }
   }, [])
 
@@ -138,13 +136,11 @@ export default function LoginUpWithEmail({ ...props }) {
                       id="identifier"
                       onBlur={formik.handleBlur}
                       type="email"
-                      label="Введите email"
                       name="identifier"
                       value={formik.values.identifier}
                       onChange={formik.handleChange}
                       error={
-                        formik.touched.identifier &&
-                        Boolean(formik.errors.identifier)
+                        formik.touched.identifier && formik.errors.identifier
                       }
                       className={
                         formik.touched.identifier && formik.errors.identifier
@@ -178,14 +174,10 @@ export default function LoginUpWithEmail({ ...props }) {
                       id="password"
                       onBlur={formik.handleBlur}
                       type="password"
-                      label="Введите пароль"
                       name="password"
                       value={formik.values.password}
                       onChange={formik.handleChange}
-                      error={
-                        formik.touched.password &&
-                        Boolean(formik.errors.password)
-                      }
+                      error={formik.touched.password && formik.errors.password}
                       className={
                         formik.touched.password && formik.errors.password
                           ? classes.inputError

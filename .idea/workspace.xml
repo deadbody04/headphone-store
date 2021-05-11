@@ -20,32 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/pages/_app.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/graphql/mutations/Data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Auth/AuthStyles/Sigin.Login.style.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/AuthStyles/Sigin.Login.style.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/loogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/loogin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUp.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUpWithEmail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUpWithEmail.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/GoogleIcon/GoogleIcon.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/GoogleIcon/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Menu/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Menu/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/graphql/apolloClient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/graphql/apolloClient.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/graphql/mutations/LoginUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/graphql/mutations/LoginUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/graphql/mutations/RegisterUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/graphql/mutations/RegisterUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actions/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/reducers/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/reducers/reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/reducers/reducer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/types/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/types/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/types/types.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/types/types.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/utils/_mocks_/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/_mocks_/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/utils/_mocks_/errorMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/_mocks_/errorMessage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +200,10 @@
       <workItem from="1620366027876" duration="1383000" />
       <workItem from="1620370132363" duration="5379000" />
       <workItem from="1620377560785" duration="3018000" />
-      <workItem from="1620618957218" duration="10332000" />
+      <workItem from="1620618957218" duration="12893000" />
+      <workItem from="1620635531821" duration="314000" />
+      <workItem from="1620652458863" duration="3397000" />
+      <workItem from="1620718456704" duration="2405000" />
     </task>
     <servers />
   </component>
