@@ -44,7 +44,7 @@ export default function SignUp({ setForm }) {
                   background: '#4285F4',
                   border: 'solid 1px #4285F4',
                 }}
-                href={`&{process.env.STRAPI_API_URL}/connect/&{google}`}
+                href={`&{process.env.STRAPI_API_URL}/connect/google`}
               >
                 Sign up with Google
               </Button>
@@ -59,7 +59,7 @@ export default function SignUp({ setForm }) {
                   background: '#3A558E',
                   border: 'solid 1px #3A558E',
                 }}
-                href={`&{process.env.STRAPI_API_URL}/connect/&{vk}`}
+                href={`&{process.env.STRAPI_API_URL}/connect/vk`}
               >
                 Sign up with VKontakte
               </Button>
