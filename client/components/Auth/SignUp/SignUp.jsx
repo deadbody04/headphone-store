@@ -1,4 +1,4 @@
-import { Typography, Grid, Button, Link, IconButton } from '@material-ui/core'
+import { Typography, Grid, Button, Link } from '@material-ui/core'
 import React from 'react'
 import { useStyles } from '../AuthStyles/Sigin.Login.style'
 
@@ -44,8 +44,9 @@ export default function SignUp({ setForm }) {
                   background: '#4285F4',
                   border: 'solid 1px #4285F4',
                 }}
-                href={`&{process.env.STRAPI_API_URL}/connect/google`}
+                href={`${process.env.STRAPI_API_URL}/connect/google`}
               >
+                {console.log(process.env.STRAPI_API_URL)}
                 Sign up with Google
               </Button>
             </Typography>
@@ -59,7 +60,7 @@ export default function SignUp({ setForm }) {
                   background: '#3A558E',
                   border: 'solid 1px #3A558E',
                 }}
-                href={`&{process.env.STRAPI_API_URL}/connect/vk`}
+                href={`${process.env.STRAPI_API_URL}/connect/vk`}
               >
                 Sign up with VKontakte
               </Button>

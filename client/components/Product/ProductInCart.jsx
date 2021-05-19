@@ -10,8 +10,12 @@ import {
 } from '@material-ui/core'
 import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 
+import DATA from '../../graphql/queries/Data'
+import { useQuery } from '@apollo/client'
+
 export default function ProductInCart(props) {
   const classes = useStyles()
+
   const {
     product,
     removeProductFromCart,
@@ -33,7 +37,7 @@ export default function ProductInCart(props) {
         <Grid container>
           <Grid item>
             <Box>
-              <img src={product.img} alt="hp" className={classes.productImg} />
+              <img src={`http://localhost:1337` + product.image[0].url} alt="hp" className={classes.productImg} />
             </Box>
           </Grid>
           <Grid item className={classes.secondProductGrid}>

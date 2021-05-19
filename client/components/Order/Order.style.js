@@ -33,20 +33,12 @@ export const AntTab = withStyles((theme) => ({
 export const useStyles = makeStyles((theme) => ({
   mainGrid: {
     width: '100%',
-    minHeight: 700,
+    minHeight: 800,
     margin: 'auto',
+    marginTop: 200,
     [theme.breakpoints.down('sm')]: {
       marginLeft: '10%',
     },
-  },
-  close: {
-    zIndex: 999999,
-    width: 165,
-    height: 40,
-    position: 'absolute',
-    top: 30,
-    left: 40,
-    cursor: 'pointer',
   },
   headerSection: {
     background: '#2D2D2D',
@@ -200,7 +192,6 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: 14,
   },
   secondGrid: {
-    marginTop: 110,
     [theme.breakpoints.down('sm')]: {
       marginTop: 20,
     },

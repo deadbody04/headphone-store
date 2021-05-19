@@ -6,6 +6,7 @@ import AppController from '../store/controllers/AppController'
 import withApollo from '../graphql/apolloClient'
 import GlobalState from '../store/providers/GlobalState'
 import '../public/styles/globals.css'
+import ProviderPage from './auth/[provider]'
 
 const MyApp = ({ Component, pageProps, apollo }) => {
   useEffect(() => {
@@ -15,13 +16,13 @@ const MyApp = ({ Component, pageProps, apollo }) => {
     }
   }, [])
   return (
-    <GlobalState>
-      <AppController>
-        <ApolloProvider client={apollo}>
+    <ApolloProvider client={apollo}>
+      <GlobalState>
+        <AppController>
           <Component {...pageProps} />
-        </ApolloProvider>
-      </AppController>
-    </GlobalState>
+        </AppController>
+      </GlobalState>
+    </ApolloProvider>
   )
 }
 

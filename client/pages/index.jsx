@@ -1,10 +1,10 @@
 import React from 'react'
-import MainContent from '../components/MainContent'
+import Header from '../components/Menu/Header'
 
 export default function Index() {
   return (
     <>
-      <MainContent />
+      <Header />
     </>
   )
 }

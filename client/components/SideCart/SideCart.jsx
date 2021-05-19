@@ -6,12 +6,65 @@ import {
   Typography,
   Button,
   Dialog,
+  Tabs,
+  Tab,
 } from '@material-ui/core'
 import { ChevronLeft, ChevronRight } from '@material-ui/icons'
 import { useStyles } from './SideCart.style'
 import ProductInCart from '../Product/ProductInCart'
 import clsx from 'clsx'
 import Cart from '../Cart'
+import PropTypes from 'prop-types'
+import Content from '../Content/Content'
+import MainContent from '../MainContent/MainContent'
+import Order from '../Order/Order'
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props
+
+  return (
+    <div
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <>{children}</>}
+    </div>
+  )
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+}
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  }
+}
+
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event) => {
+        event.preventDefault()
+      }}
+      {...props}
+    />
+  )
+}
+
+//----------------------------------------------------------------------------//
+//----------------------------------------------------------------------------//
+//----------------------------------------------------------------------------//
+//----------------------------------------------------------------------------//
+//----------------------------------------------------------------------------//
+//----------------------------------------------------------------------------//
 
 export default function SideCart(props) {
   const {
@@ -24,6 +77,12 @@ export default function SideCart(props) {
     addQuantity,
     product,
   } = props
+
+  const [value, setValue] = React.useState(0)
+  const handleChange = (event, newValue) => {
+    setValue(newValue)
+  }
+
   const itemsPrice = carts.reduce(
     (resPrice, curElement) =>
       resPrice + curElement.product.price * curElement.quantity,
@@ -112,28 +171,58 @@ export default function SideCart(props) {
           <>
             <Button
               className={classes.viewCartButton}
-              onClick={() => {
-                handleClickOpen()
-                toggleDrawer(anchor, false)
-              }}
-              product={product}
-              carts={carts}
+              onClick={handleClickOpen}
             >
+              {' '}
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="simple tabs example"
+                indicatorColor="false"
+                className={classes.tabs}
+              >
+                <LinkTab
+                  {...a11yProps(0)}
+                  className={classes.linkTabEmpty}
+                  disabled
+                />
+                <LinkTab {...a11yProps(1)} className={classes.linkTab} />
+                <LinkTab {...a11yProps(2)} className={classes.linkTab} />
+              </Tabs>
               View Cart
             </Button>
           </>
         )}
-        <Dialog open={open} fullScreen>
-          <Cart
-            product={product}
-            carts={carts}
-            setOpen={setOpen}
-            removeProductFromCart={removeProductFromCart}
-            removeQuantity={removeQuantity}
-            addQuantity={addQuantity}
-          />
-        </Dialog>
+        {/*<Dialog open={open} fullScreen>*/}
+        {/*  <Cart*/}
+        {/*    product={product}*/}
+        {/*    carts={carts}*/}
+        {/*    setOpen={setOpen}*/}
+        {/*    removeProductFromCart={removeProductFromCart}*/}
+        {/*    removeQuantity={removeQuantity}*/}
+        {/*    addQuantity={addQuantity}*/}
+        {/*  />*/}
+        {/*</Dialog>*/}
       </Container>
+      <TabPanel value={value} index={0}>
+        <div className={classes.headerImg}>
+          <Content />
+        </div>
+        <MainContent />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <Order product={product} />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <Cart
+          product={product}
+          carts={carts}
+          setOpen={setOpen}
+          removeProductFromCart={context.removeProductFromCart}
+          removeQuantity={context.removeQuantity}
+          addQuantity={context.addQuantity}
+        />
+      </TabPanel>
     </div>
   )
 }

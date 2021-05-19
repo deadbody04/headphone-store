@@ -48,7 +48,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   viewCartButton: {
     margin: 'auto',
-    width: '100%',
     height: 40,
     padding: 0,
     borderRadius: 0,
@@ -65,8 +64,19 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   fullPrice: {
+    marginTop: -50,
     fontSize: 26,
     lineHeight: 1.5,
     font: 'var(--fnt,var(--font_8))',
+  },
+  tabs: {
+    '&.MuiTabs-root': {
+      position: 'absolute',
+      zIndex: 99999,
+    },
+    '&.MuiTab-fullWidth:': {
+      width: 100,
+      height: 30,
+    },
   },
 }))

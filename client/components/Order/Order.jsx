@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import {
   Box,
   Typography,
@@ -8,16 +9,19 @@ import {
   AccordionSummary,
   AccordionDetails,
   Link,
+  CircularProgress,
 } from '@material-ui/core'
+import { Add } from '@material-ui/icons'
+
 import Header from '../Menu/Header'
 import EmailDistribution from '../EmailDistribution/EmailDistribution'
 import OtherLinks from '../OtherLinks/OtherLinks'
 import Footer from '../Footer/Footer'
-import Products from '../Data/Products'
-import React, { useState } from 'react'
+
 import { useStyles, AntTab, AccordionCustom } from './Order.style'
+import DATA from '../../graphql/queries/Data'
+import { useQuery } from '@apollo/client'
 import PropTypes from 'prop-types'
-import { Add } from '@material-ui/icons'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -50,12 +54,26 @@ function a11yProps(index) {
 export default function Order(props) {
   const classes = useStyles()
 
-  const [openButton, setOpenButton] = useState(1)
+  const [openButton] = useState(1)
   const [value, setValue] = useState(0)
+  const { data, loading, error } = useQuery(DATA)
+
+  if (loading)
+    return (
+      <div style={{ width: '100%', height: '100%' }}>
+        <CircularProgress
+          style={{
+            position: 'absolute',
+            left: '48%',
+            top: '48%',
+            color: '#FFF',
+          }}
+        />
+      </div>
+    )
+  if (error) return `Error! ${error.message}`
 
   const { addProductToCart, setOpen, setForm } = props
-
-  const { products } = Products
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
@@ -65,53 +83,64 @@ export default function Order(props) {
     setOpen(false)
   }
 
-  const allProducts = products.map((item) => {
+  const allProducts = data.products.map((item, index) => {
     return (
       <AntTab
-        key={item.id}
-        {...a11yProps(item.id)}
-        icon={<img src={item.icon} alt="hp" className={classes.headIcon} />}
+        key={index}
+        {...a11yProps(index)}
+        icon={
+          <img
+            src={`http://localhost:1337` + item.image[0].url}
+            alt="hp"
+            className={classes.headIcon}
+          />
+        }
       />
     )
   })
-  const productsPhoto = products.map((item) => {
+  const productsPhoto = data.products.map((item, index) => {
     return (
       <TabPanel
-        key={item.id}
+        key={index}
         value={value}
-        index={item.id}
+        index={index}
         className={classes.imgBox}
       >
-        <img src={item.img} alt="headphones" className={classes.image} />
+        <img
+          src={`http://localhost:1337` + item.image[0].url}
+          alt="headphones"
+          className={classes.image}
+        />
       </TabPanel>
     )
   })
-  const colorName = products.map((item) => {
+  const colorName = data.products.map((item, index) => {
     return (
-      <TabPanel key={item.id} value={value} index={item.id}>
-        Color: {item.paragraph}
+      <TabPanel key={index} value={value} index={index}>
+        Color: {item.description}
       </TabPanel>
     )
   })
-  const colorPicker = products.map((item, index) => {
+  const colorPicker = data.products.map((item, index) => {
     return (
       <AntTab
+        key={item.id}
         className={classes.colorTab}
         {...a11yProps(index)}
         style={{ background: `${item.color}` }}
       />
     )
   })
-  const productPrice = products.map((item) => {
+  const productPrice = data.products.map((item, index) => {
     return (
-      <TabPanel key={item.id} value={value} index={item.id}>
+      <TabPanel key={index} value={value} index={index}>
         Price: {item.price}
       </TabPanel>
     )
   })
-  const buyButton = products.map((item) => {
+  const buyButton = data.products.map((item, index) => {
     return (
-      <TabPanel key={item.id} value={value} index={item.id}>
+      <TabPanel key={index} value={value} index={index}>
         <Box>
           <Button
             className={classes.buttonOrder}
@@ -130,28 +159,28 @@ export default function Order(props) {
     )
   })
 
+  const model = data.products.map((item, index) => {
+    return (
+      <TabPanel key={index} value={value} index={index}>
+        {item.model}
+      </TabPanel>
+    )
+  })
+
+  const skuNumber = data.products.map((item, index) => {
+    return (
+      <TabPanel key={index} value={value} index={index}>
+        SKU: {item.SKU}
+      </TabPanel>
+    )
+  })
+
   return (
     <main>
-      <Link className={classes.close} onClick={handleClosePage} />
       <div className={classes.headerSection}>
-        <Header openButton={openButton} />
         <Grid item container className={classes.mainSection}>
           <Grid container className={classes.mainGrid}>
             <Grid item>
-              <Typography variant="h2" className={classes.linkSection}>
-                <Link
-                  href="#"
-                  underline="none"
-                  className={classes.homeLink}
-                  onClick={handleClosePage}
-                >
-                  Home
-                </Link>
-                /
-                <span className={classes.nameOfModel}>
-                  Soundbeam ERD - 3083
-                </span>
-              </Typography>
               <Box className={classes.imgBox}>
                 {productsPhoto}
                 <AppBar position="static" className={classes.switchBox}>
@@ -175,10 +204,10 @@ export default function Order(props) {
             </Grid>
             <Grid item className={classes.secondGrid}>
               <Typography variant="h1" className={classes.headphoneTitle}>
-                Soundbeam ERD - 3083
+                {model}
               </Typography>
               <Typography variant="h2" className={classes.underTitle}>
-                SKU: 00001
+                {skuNumber}
               </Typography>
               <Typography variant="h3" className={classes.price}>
                 {productPrice}

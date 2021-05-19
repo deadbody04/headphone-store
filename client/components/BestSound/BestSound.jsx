@@ -32,7 +32,7 @@ export default function BestSound(props) {
               <img src="https://static.wixstatic.com/media/82fcd3_7b50ff02a3dd411fac2e6ced36f2aed0~mv2.png/v1/fill/w_488,h_267,al_c,q_85,usm_0.66_1.00_0.01/Model_Strip_Single.webp" className={classes.image}/>
             </Container>
           </Grid>
-          <Grid item className={classes.gridItems}>
+          <Grid item container className={classes.gridItems}>
             <Container className={classes.gridTexSecond}>
               <Typography
                 variant="h3"
@@ -53,15 +53,8 @@ export default function BestSound(props) {
                 find the perfect fit and maximize comfort.
               </Typography>
               <Typography className={classes.textAbout}>
-                <Button
-                  className={classes.buttonOrder}
-                  variant="outlined"
-                  onClick={handleClickOpen}
-                >
-                  Order Now
-                </Button>
                 <Dialog open={open} fullScreen>
-                  <Grid className={classes.mainGrid}>
+                  <Grid container>
                     <Order
                       product={product}
                       setOpen={setOpen}

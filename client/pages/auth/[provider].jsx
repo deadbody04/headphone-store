@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import * as ACTIONS from '../../store/actions/auth'
 import { AppContext } from '../../store/providers/AppProvider'
 import { logoutUser } from '../../utils/_mocks_/auth'
+import Loader from '../../components/Loader/Loader'
 
 const ProviderPage = () => {
   const router = useRouter()
@@ -34,13 +35,13 @@ const ProviderPage = () => {
           } else {
             dispatch(ACTIONS.authError())
             if (res.message.code === 11000) {
-              //Пользователь уже существует
+              router.push('/')
             } else if (Array.isArray(res.message)) {
-              //email уже существует
+              router.push('/')
             } else {
-              //Ошибка
+              router.push('/')
             }
-            //router.push
+            router.push('/')
           }
         })
       return () => {
@@ -52,6 +53,8 @@ const ProviderPage = () => {
       //router.push
     }
   }, [router])
+  return< Loader />
+
 }
 
 export default ProviderPage

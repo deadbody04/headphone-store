@@ -2,12 +2,12 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme) => ({
   fullPage: {
+    width: '100%',
     background: '#2D2D2D',
   },
   mainBlock: {
     background: '#2D2D2D',
-    minHeight: 600,
-    maxHeight: 700,
+    height: '100vh',
   },
   mainContainer: {
     width: 960,
@@ -26,6 +26,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   emptyCartTitle: {
     fontSize: 24,
+    marginTop: 80
   },
   linkContinue: {
     marginTop: 20,
@@ -124,6 +125,7 @@ export const useStyles = makeStyles((theme) => ({
     height: 20,
   },
   firstGrid: {
+    marginTop: 120,
     width: 615,
     height: 235,
     [theme.breakpoints.down('sm')]: {
@@ -131,6 +133,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   secondGrid: {
+    marginTop: 120,
     width: 280,
     height: 235,
     marginLeft: 'auto',
@@ -142,7 +145,7 @@ export const useStyles = makeStyles((theme) => ({
   thirdGrid: {
     marginLeft: 'auto',
     width: 280,
-    marginTop: 80,
+    marginTop: 100,
   },
   boxTitleFirst: {
     color: '#FFF',
@@ -198,18 +201,6 @@ export const useStyles = makeStyles((theme) => ({
   shippingPrice: {
     fontSize: 16,
     marginLeft: 'auto',
-  },
-  geolocationTitle: {
-    marginTop: 10,
-    cursor: 'pointer',
-    fontSize: 16,
-    textDecoration: 'underline',
-    font: 'var(--fnt,var(--font_5))',
-    color: '#FFF',
-    opacity: 0.8,
-    '&:hover': {
-      opacity: 1,
-    },
   },
   checkoutButton: {
     width: '100%',

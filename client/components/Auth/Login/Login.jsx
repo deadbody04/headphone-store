@@ -43,7 +43,7 @@ export default function Login({ setForm }) {
                   background: '#4285F4',
                   border: 'solid 1px #4285F4',
                 }}
-                href={`&{process.env.STRAPI_API_URL}/connect/google`}
+                href={`${process.env.STRAPI_API_URL}/connect/google`}
               >
                 Log in with Google
               </Button>
@@ -58,7 +58,7 @@ export default function Login({ setForm }) {
                   background: '#3A558E',
                   border: 'solid 1px #3A558E',
                 }}
-                href={`&{process.env.STRAPI_API_URL}/connect/vk`}
+                href={`${process.env.STRAPI_API_URL}/connect/vk`}
               >
                 Log in with VKontakte
               </Button>

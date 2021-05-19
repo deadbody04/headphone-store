@@ -1,3 +1,4 @@
+import React, { useContext, useState } from 'react'
 import {
   Box,
   Typography,
@@ -6,11 +7,15 @@ import {
   Button,
   Dialog,
 } from '@material-ui/core'
-import classNames from 'classnames'
-import React, { useContext, useState } from 'react'
-import { useStyles } from './Content.style'
+
 import Order from '../Order'
+import Header from '../Menu'
 import Context from '../../store/controllers/Context'
+
+import classNames from 'classnames'
+import { useStyles } from './Content.style'
+
+
 
 export default function Content(
   addProductToCart,
@@ -63,11 +68,14 @@ export default function Content(
                   </Button>
                   <Dialog open={open} fullScreen>
                     <Grid className={classes.mainGrid}>
-                      <Order
-                        product={product}
-                        setOpen={setOpen}
-                        addProductToCart={context.addProductToCart}
-                      />
+                      <>
+                        <Header />
+                        <Order
+                          product={product}
+                          setOpen={setOpen}
+                          addProductToCart={context.addProductToCart}
+                        />
+                      </>
                     </Grid>
                   </Dialog>
                 </Typography>

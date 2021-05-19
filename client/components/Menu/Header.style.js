@@ -1,10 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme) => ({
+  headerImg: {
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url('https://static.wixstatic.com/media/82fcd3_1e4cb7a7053948998237a43286bee5bf~mv2_d_3840_1470_s_2.jpg/v1/fill/w_1903,h_752,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_1e4cb7a7053948998237a43286bee5bf~mv2_d_3840_1470_s_2.webp')`,
+  },
   header: {
-    background: 'rgba(0, 0, 0, 0)',
+    background: 'rgba(0,0,0,0)',
     boxShadow: 'none',
-    position: 'relative',
+    position: 'absolute',
   },
   flexHead: {
     maxWidth: '98%',
@@ -119,9 +124,12 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: -5,
   },
   secondList: {
-    height: '80%',
+    height: '70%',
     background: '#2D2D2D',
     paddingTop: 35,
+    [theme.breakpoints.down('sm')]: {
+      height: '60%',
+    },
   },
   thirdList: {
     height: 'auto',
@@ -141,6 +149,109 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       top: 10,
       right: 10,
+    },
+  },
+  tabs: {
+    '&.selected': {
+      background: 'transparent',
+    },
+    '&.MuiTabs-root': {
+      position: 'absolute',
+      zIndex: 99999,
+    },
+    '&.MuiTab-fullWidth:': {
+      width: 100,
+      height: 30,
+    },
+  },
+  linkTab: {
+    width: 0,
+    height: 25,
+    marginTop: 8,
+    '&.selected': {
+      background: 'transparent',
+    },
+    '&.MuiTab-root': {
+      minWidth: 75,
+      minHeight: 30,
+      color: 'black',
+      textAlign: 'center',
+    },
+  },
+  linkTabEmpty: {
+    width: 0,
+    position: 'absolute',
+    height: 0,
+    borderRadius: '100%',
+    '&.MuiTab-root': {
+      minWidth: 0,
+      minHeight: 0,
+      color: 'black',
+      fontSize: 0,
+      textAlign: 'center',
+      cursor: 'default',
+    },
+    '&.MuiTab-wrapped:': { minWidth: 77, minHeight: 0 },
+  },
+  fourList: {
+    height: '5%',
+    color: '#FFF',
+  },
+  viewCartButton: {
+    margin: 'auto',
+    width: '100%',
+    height: 40,
+    padding: 0,
+    borderRadius: 0,
+    background: '#CAAF8B',
+    boxShadow: 'none',
+    color: '#000',
+    textAlign: 'center',
+    transition: 'all 0.0s ease',
+    textTransform: 'none',
+    '&:hover': {
+      color: '#000',
+      background: '#CAAF8B',
+      transition: 'all 0.4s ease',
+    },
+  },
+  fullPrice: {
+    fontSize: 26,
+    lineHeight: 1.5,
+    font: 'var(--fnt,var(--font_8))',
+  },
+  textAbout: {
+    color: '#FFF',
+    marginTop: theme.spacing(3),
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 120,
+    },
+  },
+  blockAbout: {
+    position: 'relative',
+    marginTop: '25%',
+  },
+  aboutExperience: {
+    textTransform: 'capitalize',
+    fontSize: 80,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 40,
+    },
+  },
+  nameOfModel: {
+    fontSize: 16,
+  },
+  buttonOrder: {
+    borderRadius: '0',
+    borderColor: '#FFF',
+    color: '#FFF',
+    textTransform: 'capitalize',
+    width: 170,
+    height: 50,
+    '&:hover': {
+      transition: 'all 0.3s ease',
+      background: '#FFF',
+      color: '#AC9E76',
     },
   },
 }))

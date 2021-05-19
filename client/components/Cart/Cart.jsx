@@ -18,10 +18,16 @@ import ProductInCart from '../Product/ProductInCart'
 
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { useTheme } from '@material-ui/core/styles'
+import { useRouter } from 'next/router'
 
 export default function Cart(props) {
   const classes = useStyles()
   const theme = useTheme()
+  const router = useRouter()
+
+  const pushLink = () => {
+    router.push('/')
+  }
 
   const {
     product,
@@ -33,22 +39,15 @@ export default function Cart(props) {
     setOpen,
   } = props
 
-  const handleClose = () => {
-    setOpen(false)
-  }
-
   const itemsPrice = carts.reduce(
     (resPrice, curElement) =>
       resPrice + curElement.product.price * curElement.quantity,
     0
   )
-
   const matches = useMediaQuery(theme.breakpoints.up('sm'))
 
   return (
     <main className={classes.fullPage}>
-      <Link className={classes.close} onClick={handleClose} />
-      <Header />
       <Box className={classes.mainBlock}>
         <Grid container item className={classes.mainContainer}>
           {carts.length !== 0 ? (
@@ -77,7 +76,7 @@ export default function Cart(props) {
                       >
                         <Grid item className={classes.imgBox}>
                           <img
-                            src={product.img}
+                            src={`http://localhost:1337` + product.image[0].url}
                             alt="headphone icon"
                             className={classes.headphoneImg}
                           />
@@ -90,7 +89,7 @@ export default function Cart(props) {
                             ${product.price}
                           </Typography>
                           <Typography className={classes.colorText}>
-                            Color: {product.paragraph}
+                            Color: {product.description}
                           </Typography>
                         </Grid>
                         <Grid item className={classes.inputBox}>
@@ -113,9 +112,7 @@ export default function Cart(props) {
                           </Box>
                         </Grid>
                         <Grid item className={classes.priceBox}>
-                          <Typography className={classes.paper}>
-                            $299.00
-                          </Typography>
+                          <Typography>{product.price}</Typography>
                         </Grid>
                         <Grid item className={classes.iconBox}>
                           <IconButton
@@ -150,9 +147,6 @@ export default function Cart(props) {
                       Free
                     </Typography>
                   </Grid>
-                  <Typography className={classes.geolocationTitle}>
-                    Altayskiy Kray, Russia
-                  </Typography>
                 </Grid>
                 <Grid container item className={classes.thirdGrid}>
                   <Grid container item className={classes.totalPriceBlock}>
@@ -177,10 +171,6 @@ export default function Cart(props) {
               <Typography className={classes.emptyCartTitle}>
                 Cart is empty
               </Typography>
-              <br />
-              <Link onClick={handleClose} className={classes.linkContinue}>
-                Continue Shopping
-              </Link>
             </Grid>
           )}
         </Grid>

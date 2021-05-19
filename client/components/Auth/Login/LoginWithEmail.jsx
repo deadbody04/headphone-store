@@ -61,13 +61,13 @@ export default function LoginUpWithEmail({ ...props }) {
     try {
       const data = await loginUser(dispatch, login, values)
       if (data.user) {
-        // homePage()
-        // handleClose()
+        homePage()
+        handleClose()
       } else {
-        // handleClick()
+        handleClick()
       }
     } catch (error) {
-      // handleClick()
+      handleClick()
     }
   }, [])
 
@@ -96,7 +96,7 @@ export default function LoginUpWithEmail({ ...props }) {
 
   return (
     <main>
-      <Grid className={classes.mainGrid}>
+      <Grid container className={classes.mainGrid}>
         <Grid item className={classes.container}>
           <Grid container direction="column" alignItems="center">
             <Grid item>
@@ -118,7 +118,7 @@ export default function LoginUpWithEmail({ ...props }) {
                 </Link>
               </Typography>
             </Grid>
-            <form className={classes.margin}>
+            <form className={classes.margin} onSubmit={formik.handleSubmit}>
               <Grid item className={classes.heading}>
                 <Typography variant="h2">
                   <FormControl className={classes.margin}>
@@ -193,7 +193,6 @@ export default function LoginUpWithEmail({ ...props }) {
                   </FormControl>
                 </Typography>
               </Grid>
-
               <Grid item className={classes.heading}>
                 <div className={classes.passwordSection}>
                   <Link className={classes.forgotPassword} href="#">

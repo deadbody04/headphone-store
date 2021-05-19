@@ -3,14 +3,16 @@ import { makeStyles } from '@material-ui/core/styles'
 export const useStyles = makeStyles((theme) => ({
   homePart: {
     padding: 0,
-    height: 650,
+    height: 800,
     width: '100%',
     position: 'relative',
-    background: 'rgba(0, 0, 0, 0)',
   },
   textAbout: {
     color: '#FFF',
     marginTop: theme.spacing(3),
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 120,
+    },
   },
   blockAbout: {
     position: 'relative',

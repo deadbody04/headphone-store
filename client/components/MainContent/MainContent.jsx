@@ -1,30 +1,27 @@
 import React from 'react'
-import Content from '../Content'
-import Header from '../Menu'
+
+import { Parallax } from 'react-parallax'
+import { useStyles } from './MainContent.style'
+import { Typography, Box, Grid } from '@material-ui/core'
+import { Headset, FlashOn, Bluetooth, GraphicEq } from '@material-ui/icons'
+
 import Reviews from '../Reviews'
 import AsFeaturedOn from '../AsFeaturedOn'
 import BestSound from '../BestSound'
 import EmailDistribution from '../EmailDistribution'
 import Footer from '../Footer'
 import OtherLinks from '../OtherLinks'
-import { Parallax } from 'react-parallax'
-import { useStyles } from './MainContent.style'
-import { Typography, Box, Grid } from '@material-ui/core'
-import { Headset, FlashOn, Bluetooth, GraphicEq } from '@material-ui/icons'
+import Loader from '../Loader'
 
 const image =
   'https://static.wixstatic.com/media/82fcd3_0d16229674fd4698b2a7a99a34d42de1~mv2.jpg/v1/fill/w_1175,h_832,al_c,q_85/82fcd3_0d16229674fd4698b2a7a99a34d42de1~mv2.webp'
 const image2 =
   'https://static.wixstatic.com/media/82fcd3_6722574f5e26430090bb86df75c063ae~mv2_d_4724_3072_s_4_2.jpg/v1/fill/w_1432,h_866,al_c,q_85,usm_0.66_1.00_0.01/82fcd3_6722574f5e26430090bb86df75c063ae~mv2_d_4724_3072_s_4_2.webp'
 
-export default function HomePage() {
+export default function MainContent() {
   const classes = useStyles()
   return (
     <>
-      <div className={classes.headerSection}>
-        <Header />
-        <Content />
-      </div>
       <Parallax bgImage={image} strength={600} className={classes.infoAboutHP}>
         <Box id="content">
           <Grid container spacing={0} className={classes.mainGridCont}>
@@ -45,7 +42,7 @@ export default function HomePage() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item className={classes.gridItems} >
+            <Grid item className={classes.gridItems}>
               <Box className={classes.gridTexSecond}>
                 <Typography variant="h6">
                   <p>
@@ -61,7 +58,7 @@ export default function HomePage() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item className={classes.gridItems} >
+            <Grid item className={classes.gridItems}>
               <Box className={classes.gridTextFirst}>
                 <Typography variant="h6">
                   <p>
@@ -77,7 +74,7 @@ export default function HomePage() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item className={classes.gridItems} >
+            <Grid item className={classes.gridItems}>
               <Box className={classes.gridTexSecond}>
                 <Typography variant="h6">
                   <p>

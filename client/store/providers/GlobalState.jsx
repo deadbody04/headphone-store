@@ -1,7 +1,9 @@
 import React, { useReducer } from 'react'
 import Context from '../controllers/Context'
 import reducer from '../reducers/reducer'
-import Products from '../../components/Data/Products'
+import DATA from '../../graphql/queries/Data'
+import { useQuery } from '@apollo/client'
+
 import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
@@ -10,7 +12,7 @@ import {
 } from '../types/types'
 
 export default function GlobalState(props) {
-  const { products } = Products
+  const { data, loading, error } = useQuery(DATA)
 
   const [state, dispatch] = useReducer(reducer, { carts: [] })
 
@@ -45,7 +47,6 @@ export default function GlobalState(props) {
   return (
     <Context.Provider
       value={{
-        products: products,
         addProductToCart: addProductToCart,
         removeProductFromCart: removeProductFromCart,
         removeQuantity: removeQuantity,
