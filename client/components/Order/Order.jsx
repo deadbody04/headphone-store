@@ -8,12 +8,11 @@ import {
   Tabs,
   AccordionSummary,
   AccordionDetails,
-  Link,
-  CircularProgress,
+  Dialog,
 } from '@material-ui/core'
 import { Add } from '@material-ui/icons'
 
-import Header from '../Menu/Header'
+
 import EmailDistribution from '../EmailDistribution/EmailDistribution'
 import OtherLinks from '../OtherLinks/OtherLinks'
 import Footer from '../Footer/Footer'
@@ -22,6 +21,7 @@ import { useStyles, AntTab, AccordionCustom } from './Order.style'
 import DATA from '../../graphql/queries/Data'
 import { useQuery } from '@apollo/client'
 import PropTypes from 'prop-types'
+import Loader from '../Loader'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -54,33 +54,25 @@ function a11yProps(index) {
 export default function Order(props) {
   const classes = useStyles()
 
-  const [openButton] = useState(1)
   const [value, setValue] = useState(0)
+  const [open, setOpen] = useState(false)
+
+  const { addProductToCart } = props
   const { data, loading, error } = useQuery(DATA)
 
-  if (loading)
-    return (
-      <div style={{ width: '100%', height: '100%' }}>
-        <CircularProgress
-          style={{
-            position: 'absolute',
-            left: '48%',
-            top: '48%',
-            color: '#FFF',
-          }}
-        />
-      </div>
-    )
+  if (loading) return <Loader />
   if (error) return `Error! ${error.message}`
 
-  const { addProductToCart, setOpen, setForm } = props
+  const handleClickOpen = () => {
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    setOpen(false)
+  }
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
-  }
-
-  const handleClosePage = () => {
-    setOpen(false)
   }
 
   const allProducts = data.products.map((item, index) => {
@@ -98,6 +90,7 @@ export default function Order(props) {
       />
     )
   })
+
   const productsPhoto = data.products.map((item, index) => {
     return (
       <TabPanel
@@ -114,6 +107,7 @@ export default function Order(props) {
       </TabPanel>
     )
   })
+
   const colorName = data.products.map((item, index) => {
     return (
       <TabPanel key={index} value={value} index={index}>
@@ -121,6 +115,7 @@ export default function Order(props) {
       </TabPanel>
     )
   })
+
   const colorPicker = data.products.map((item, index) => {
     return (
       <AntTab
@@ -131,6 +126,7 @@ export default function Order(props) {
       />
     )
   })
+
   const productPrice = data.products.map((item, index) => {
     return (
       <TabPanel key={index} value={value} index={index}>
@@ -138,6 +134,7 @@ export default function Order(props) {
       </TabPanel>
     )
   })
+
   const buyButton = data.products.map((item, index) => {
     return (
       <TabPanel key={index} value={value} index={index}>
@@ -151,7 +148,11 @@ export default function Order(props) {
           </Button>
         </Box>
         <Box>
-          <Button className={classes.buttonBuy} variant="outlined">
+          <Button
+            className={classes.buttonBuy}
+            variant="outlined"
+            onClick={handleClickOpen}
+          >
             Buy Now
           </Button>
         </Box>

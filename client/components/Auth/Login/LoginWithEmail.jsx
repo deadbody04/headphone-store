@@ -97,7 +97,7 @@ export default function LoginUpWithEmail({ ...props }) {
   return (
     <main>
       <Grid container className={classes.mainGrid}>
-        <Grid item className={classes.container}>
+        <Grid item className={classes.container} style={{ marginTop: 0 }}>
           <Grid container direction="column" alignItems="center">
             <Grid item>
               <Typography variant="h1" className={classes.headingSignUp}>

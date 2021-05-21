@@ -212,4 +212,54 @@ export const useStyles = makeStyles((theme) => ({
     width: 80,
     height: 40,
   },
+  SubmitButton: {
+    display: 'block',
+    fontSize: 16,
+    width: 'calc(100% - 30px)',
+    height: 40,
+    margin: '40px 15px 0px',
+    backgroundColor: '#B29B7C',
+    boxShadow:
+      '0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffb9f6',
+    borderRadius: 4,
+    color: '#fff',
+    fontWeight: 600,
+    cursor: 'pointer',
+    transition: 'all 100ms ease-in-out',
+    willChange: 'transform, background-color, box-shadow',
+    '&:active': {
+      backgroundColor: '#d782d9',
+      boxShadow:
+        '0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08) inset 0 1px 0 #e298d8',
+      transform: 'scale(0.99)',
+    },
+  },
+  AppWrapper: {
+    width: 500,
+    height: 400,
+    position: 'relative',
+  },
+
+  Form: {
+    animation: 'fade 200ms ease-out',
+  },
+
+  FormGroup: {
+    margin: '0 15px 20px',
+    padding: 0,
+    borderStyle: 'none',
+    backgroundColor: '#7795f8',
+    willChange: 'opacity, transform',
+    boxShadow:
+      ' 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #829fff',
+    borderRadius: 4,
+  },
+
+  FormRow: {
+    display: 'flex',
+    flexAlign: 'center',
+    alignItems: 'center',
+    marginLeft: 15,
+    borderTop: '1px solid #819efc',
+  },
 }))

@@ -15,6 +15,9 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: 30,
     minHeight: 600,
     maxHeight: 700,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   emptyCart: {
     display: 'flex',
@@ -26,7 +29,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   emptyCartTitle: {
     fontSize: 24,
-    marginTop: 80
+    marginTop: 80,
   },
   linkContinue: {
     marginTop: 20,
@@ -140,12 +143,16 @@ export const useStyles = makeStyles((theme) => ({
     borderBottom: 'solid 1px #575757',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
+      marginTop: 0,
     },
   },
   thirdGrid: {
     marginLeft: 'auto',
     width: 280,
     marginTop: 100,
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 0,
+    },
   },
   boxTitleFirst: {
     color: '#FFF',
@@ -178,12 +185,12 @@ export const useStyles = makeStyles((theme) => ({
   subtotalPrice: {
     fontSize: 16,
     marginRight: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      padding: 20,
+    },
   },
   subtotalPriceRight: {
     marginLeft: 'auto',
-    [theme.breakpoints.down('sm')]: {
-      marginRight: 'auto',
-    },
   },
   shippingPriceBox: {
     width: '100%',
@@ -197,10 +204,16 @@ export const useStyles = makeStyles((theme) => ({
   },
   shipping: {
     marginRight: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 20,
+    },
   },
   shippingPrice: {
     fontSize: 16,
     marginLeft: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      paddingRight: 20,
+    },
   },
   checkoutButton: {
     width: '100%',
@@ -220,17 +233,8 @@ export const useStyles = makeStyles((theme) => ({
       transition: 'all 0.4s ease',
     },
     [theme.breakpoints.down('sm')]: {
-      width: 50,
+      marginLeft: -50,
     },
-  },
-  close: {
-    zIndex: 999999,
-    width: 165,
-    height: 40,
-    position: 'absolute',
-    top: 30,
-    left: 40,
-    cursor: 'pointer',
   },
   totalPrice: {
     font: 'var(--fnt,var(--font_5))',
