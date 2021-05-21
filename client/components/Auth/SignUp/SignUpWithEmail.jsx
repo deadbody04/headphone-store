@@ -15,7 +15,6 @@ import { useRouter } from 'next/router'
 import { useMutation } from '@apollo/client'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
-import { Facebook, GTranslate } from '@material-ui/icons'
 
 import { registerUser } from '../../../utils/_mocks_/auth'
 import { AppContext } from '../../../store/providers/AppProvider'
@@ -322,19 +321,6 @@ export default function SignUpWithEmail({ ...props }) {
                 <Typography variant="h2" className={classes.headingLine}>
                   or sign up with
                 </Typography>
-              </div>
-            </Grid>
-            <Grid item>
-              <div className={classes.logInSection}>
-                <Link color="inherit" href="#" underline="none">
-                  <Facebook fontSize="large" className={classes.logInIconFa} />
-                </Link>
-                <Link color="inherit" href="#" underline="none">
-                  <GTranslate
-                    fontSize="large"
-                    className={classes.logInIconGoo}
-                  />
-                </Link>
               </div>
             </Grid>
           </Grid>

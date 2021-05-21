@@ -10,7 +10,6 @@ import {
 } from '@material-ui/core'
 
 import { useStyles } from '../AuthStyles/Auth.style'
-import { Facebook, GTranslate } from '@material-ui/icons'
 
 import { useMutation } from '@apollo/client'
 import * as yup from 'yup'
@@ -225,19 +224,6 @@ export default function LoginUpWithEmail({ ...props }) {
                 <Typography variant="h2" className={classes.headingLine}>
                   or log in with
                 </Typography>
-              </div>
-            </Grid>
-            <Grid item>
-              <div className={classes.logInSection}>
-                <Link color="inherit" href="#" underline="none">
-                  <Facebook fontSize="large" className={classes.logInIconFa} />
-                </Link>
-                <Link color="inherit" href="#" underline="none">
-                  <GTranslate
-                    fontSize="large"
-                    className={classes.logInIconGoo}
-                  />
-                </Link>
               </div>
             </Grid>
           </Grid>

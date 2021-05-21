@@ -49,8 +49,6 @@ const ProviderPage = () => {
         window.localStorage.removeItem('logout')
       }
     } catch (error) {
-      //шибака
-      //router.push
     }
   }, [router])
   return< Loader />

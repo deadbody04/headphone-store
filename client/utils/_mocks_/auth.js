@@ -1,5 +1,4 @@
 import Cookies from 'js-cookie'
-
 import * as ACTIONS from '../../store/actions/auth'
 
 export const registerUser = async (dispatch, register, payload) => {
@@ -25,7 +24,6 @@ export const registerUser = async (dispatch, register, payload) => {
     return error
   }
 }
-
 export const loginUser = async (dispatch, login, payload) => {
   try {
     dispatch(ACTIONS.requestAuth())
@@ -46,7 +44,6 @@ export const loginUser = async (dispatch, login, payload) => {
     return error
   }
 }
-
 export const logoutUser = async (dispatch) => {
   dispatch(ACTIONS.logout())
   Cookies.remove('token')
