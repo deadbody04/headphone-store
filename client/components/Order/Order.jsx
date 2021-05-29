@@ -12,7 +12,6 @@ import {
 } from '@material-ui/core'
 import { Add } from '@material-ui/icons'
 
-
 import EmailDistribution from '../EmailDistribution/EmailDistribution'
 import OtherLinks from '../OtherLinks/OtherLinks'
 import Footer from '../Footer/Footer'
@@ -75,6 +74,8 @@ export default function Order(props) {
     setValue(newValue)
   }
 
+  console.log(process.env.STRAPI_API_URL)
+
   const allProducts = data.products.map((item, index) => {
     return (
       <AntTab
@@ -82,7 +83,7 @@ export default function Order(props) {
         {...a11yProps(index)}
         icon={
           <img
-            src={`http://localhost:1337` + item.image[0].url}
+            src={`${process.env.STRAPI_API_URL}` + item.image[0].url}
             alt="hp"
             className={classes.headIcon}
           />
@@ -100,7 +101,7 @@ export default function Order(props) {
         className={classes.imgBox}
       >
         <img
-          src={`http://localhost:1337` + item.image[0].url}
+          src={`${process.env.STRAPI_API_URL}` + item.image[0].url}
           alt="headphones"
           className={classes.image}
         />
