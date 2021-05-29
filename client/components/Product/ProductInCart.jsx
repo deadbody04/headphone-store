@@ -37,7 +37,7 @@ export default function ProductInCart(props) {
         <Grid container>
           <Grid item>
             <Box>
-              <img src={`${process.env.STRAPI_API_URL}` + item.image[0].url} alt="hp" className={classes.productImg} />
+              <img src={`${process.env.STRAPI_API_URL}` + product.image[0].url} alt="hp" className={classes.productImg} />
             </Box>
           </Grid>
           <Grid item className={classes.secondProductGrid}>
