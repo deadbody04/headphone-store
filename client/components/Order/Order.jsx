@@ -82,7 +82,7 @@ export default function Order(props) {
         {...a11yProps(index)}
         icon={
           <img
-            src={`http://localhost:1337` + item.image[0].url}
+            src={`https://headphone-store.herokuapp.com/` + item.image[0].url}
             alt="hp"
             className={classes.headIcon}
           />
@@ -100,7 +100,7 @@ export default function Order(props) {
         className={classes.imgBox}
       >
         <img
-          src={`http://localhost:1337` + item.image[0].url}
+          src={`https://headphone-store.herokuapp.com/` + item.image[0].url}
           alt="headphones"
           className={classes.image}
         />

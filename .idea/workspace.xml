@@ -20,12 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3ce6b4-59dc-402a-8947-d33bcaebd6c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/components/Checkout/Checkout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Checkout/checkout.style.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/ДИПЛОМНАЯ РАБОТА.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/Login/LoginWithEmail.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUpWithEmail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Auth/SignUp/SignUpWithEmail.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/auth/[provider].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/auth/[provider].jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/utils/_mocks_/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/_mocks_/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/GoogleIcon/GoogleIcon.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/GoogleIcon/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Order/Order.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Order/Order.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/SideCart/SideCart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/SideCart/SideCart.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +78,11 @@
       <recent name="C:\headphone-store\client\components\Order" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\headphone-store\client\components\Checkout" />
       <recent name="C:\headphone-store\client\graphql\queries" />
       <recent name="C:\headphone-store\client\public" />
       <recent name="C:\headphone-store\client\components\Auth" />
       <recent name="C:\headphone-store\client\components\AuthStyles" />
-      <recent name="C:\headphone-store\client\store\controllers" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -212,7 +214,13 @@
       <workItem from="1621437066109" duration="2607000" />
       <workItem from="1621489708542" duration="8705000" />
       <workItem from="1621508579867" duration="6313000" />
-      <workItem from="1621575949858" duration="4825000" />
+      <workItem from="1621575949858" duration="5458000" />
+      <workItem from="1621589441612" duration="262000" />
+      <workItem from="1621778893385" duration="9227000" />
+      <workItem from="1621844735082" duration="2578000" />
+      <workItem from="1621926641677" duration="5456000" />
+      <workItem from="1621936982165" duration="1467000" />
+      <workItem from="1622298750716" duration="241000" />
     </task>
     <servers />
   </component>
