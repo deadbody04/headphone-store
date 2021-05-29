@@ -49,7 +49,7 @@ export default function Cart(props) {
                     >
                       <Grid item className={classes.imgBox}>
                         <img
-                          src={`http://localhost:1337` + product.image[0].url}
+                          src={`${process.env.STRAPI_API_URL}` + item.image[0].url}
                           alt="headphone icon"
                           className={classes.headphoneImg}
                         />
