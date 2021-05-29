@@ -9,7 +9,7 @@ module.exports = {
     return config
   },
   env: {
-    STRAPI_API_URL: 'http://localhost:1337',
+    STRAPI_API_URL: 'https://headphone-store.herokuapp.com/',
     NEXT_PUBLIC_CAPTCHA_SECRET_KEY: process.env.NEXT_PUBLIC_CAPTCHA_SECRET_KEY,
   },
   webpackDevMiddleware: (config) => {
