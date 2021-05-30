@@ -116,7 +116,6 @@ export default function Header({
   })
   const [value, setValue] = React.useState(0)
   const { product } = props
-
   const context = useContext(Context)
 
   const toggleDrawer = (anchor, open) => (event) => {
