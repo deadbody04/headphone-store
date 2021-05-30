@@ -57,10 +57,10 @@ export default function Order(props) {
   const [open, setOpen] = useState(false)
 
   const { addProductToCart } = props
-  const { data, loading, error } = useQuery(DATA)
-
-  if (loading) return <Loader />
-  if (error) return `Error! ${error.message}`
+  // const { data, loading, error } = useQuery(DATA)
+  //
+  // if (loading) return <Loader />
+  // if (error) return `Error! ${error.message}`
 
   const handleClickOpen = () => {
     setOpen(true)
